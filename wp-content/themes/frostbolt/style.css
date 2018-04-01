@@ -7,7 +7,6 @@ Version: 1.0
 /* Typography
 */
 
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css');
 @import url('https://fonts.googleapis.com/css?family=Poppins|Playfair+Display|Vollkorn');
 
 /* Variables
@@ -193,7 +192,7 @@ body > .page {
     text-decoration: none;
 }
 
-.fa-facebook {
+.fa-facebook-f {
     -o-transition:.5s;
     -ms-transition:.5s;
     -moz-transition:.5s;
@@ -201,7 +200,7 @@ body > .page {
     transition: .5s;
 }
 
-.fa-facebook:hover {
+.fa-facebook-f:hover {
     color: var(--fb-color);
 }
 
@@ -217,7 +216,7 @@ body > .page {
     color: var(--twitter-color);
 }
 
-.fa-linkedin {
+.fa-linkedin-in {
     -o-transition:.5s;
     -ms-transition:.5s;
     -moz-transition:.5s;
@@ -225,11 +224,11 @@ body > .page {
     transition: .5s;
 }
 
-.fa-linkedin:hover {
+.fa-linkedin-in:hover {
     color: var(--linkedin-color);
 }
 
-.fa-google-plus {
+.fa-google-plus-g {
     -o-transition:.5s;
     -ms-transition:.5s;
     -moz-transition:.5s;
@@ -237,7 +236,7 @@ body > .page {
     transition: .5s;
 }
 
-.fa-google-plus:hover {
+.fa-google-plus-g:hover {
     color: var(--google-plus-color);
 }
 
