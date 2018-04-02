@@ -45,11 +45,6 @@ ul {
 	padding: 0px;
 }
 
-body > .page {
-	position: relative;
-	min-height: 100%;
-}
-
 /* Content
 */
 
@@ -249,8 +244,11 @@ body > .page {
         margin-top: 56px;
     }
     
-    .navbar {
+    .navbar-brand {
         font-family: var(--logo-font-type), serif;
+    }
+    
+    .navbar {
         position: fixed;
         top: 0;
         right: 0;
