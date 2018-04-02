@@ -245,16 +245,18 @@ body > .page {
 */
 
 @media (max-width: 575px) {
+    .container-fluid.content {
+        margin-top: 56px;
+    }
+    
     .navbar {
+        font-family: var(--logo-font-type), serif;
         position: fixed;
         top: 0;
         right: 0;
         left: 0;
         z-index: 1030;
         background-color: #f8f9fa !important;
-    }
-    .navbar-brand {
-        font-size: 1.02rem;
     }
     
     .entry-title {
