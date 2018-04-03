@@ -81,8 +81,35 @@ ul {
 /* Institutions
 */
 
-.institution li {
+.institution-card {
+    border: none;
+}
+
+.card-body {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-bottom: none;
+}
+
+.institution-img {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0;
+}
+
+.institution-card-menu {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+
+.institution-card-menu li {
     list-style-type: none;
+}
+
+.institution-card-menu li>a {
+    color: #fff;
 }
 
 
@@ -103,6 +130,11 @@ ul {
 
 /* Recent Exhibitions
 */
+
+.rpwe-img > img {
+    width: 100%;
+    height: 300px;
+}
 
 .rpwe-alignleft {
     display: inline;
@@ -240,7 +272,7 @@ ul {
 */
 
 @media (max-width: 575px) {
-    .container-fluid.header {
+    .container.header {
         margin-top: 56px;
     }
     
@@ -257,14 +289,10 @@ ul {
         background-color: #f8f9fa !important;
     }
     
-    .entry-title {
-        font-size: 1.5rem;
+    .institutions-wrap>.row>div {
+        margin: 20px;
     }
     
-    .rpwe-img > img {
-        width: 200px;
-        height: 150px;
-    }
     
     .rpwe-title {
         font-size: 1rem;
@@ -276,10 +304,7 @@ ul {
 }
 
 @media (min-width: 576px) {
-    .rpwe-img > img {
-        width: 200px;
-        height: 150px;
-    }
+
 }
 
 @media (min-width: 768px) {
@@ -291,9 +316,10 @@ ul {
 
 @media (min-width: 992px) {
     .rpwe-img > img {
-        width: 200px;
-        height: 150px;
+        width: 100%;
+        height: 200px;
     }
+
 }
 
 @media (min-width: 1200px) {}
