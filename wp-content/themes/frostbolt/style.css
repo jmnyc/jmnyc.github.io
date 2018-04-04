@@ -64,6 +64,17 @@ ul {
 /* Homepage
 */
 
+/* Home Carousel
+*/
+
+i.fas.fa-angle-left, i.fas.fa-angle-right {
+    font-size: 40px;
+    color: rgba(255, 255, 255, .8);
+}
+
+/* Home Accordion
+*/
+
 .home-accordion {
 	display: none;
 }
@@ -322,6 +333,11 @@ ul {
         left: 0;
         z-index: 1030;
         background-color: #f8f9fa !important;
+    }
+    
+    i.fas.fa-angle-left, i.fas.fa-angle-right {
+        font-size: 20px;
+        line-height: unset;
     }
     
     .institutions-wrap {
