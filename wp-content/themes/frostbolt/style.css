@@ -60,6 +60,7 @@ ul {
 /* Navbar
 */
 
+
 /* Homepage
 */
 
@@ -86,12 +87,25 @@ ul {
 }
 
 .card-body {
-    border: 1px solid rgba(0, 0, 0, 0.125);
-    border-bottom: none;
+    background: #005bd6;
+    background: -webkit-linear-gradient(to right, #005bd6, #00a7dc);
+    background: linear-gradient(to right, #005bd6, #00a7dc);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 0.3rem 0.3rem 0 0;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    margin-bottom: 0;
+    font-family: var(--logo-font-type), serif;
+}
+
+.card-title>a {
+    color: #efefef;
 }
 
 .institution-img {
-    border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0;
 }
 
@@ -105,8 +119,25 @@ ul {
 }
 
 .institution-card-menu li {
+    text-transform: uppercase;
+    font-weight: bold;
     list-style-type: none;
+    text-shadow: 1px 1px rgba(0, 0, 0);
+    font-size: 20px;
 }
+
+.exhibitions-link-wrap {    
+    padding-top: 15px;
+    padding-bottom: 7.5px;
+    border-bottom: 1px solid;
+    margin: 0 5rem;
+}
+
+.information-link-wrap {
+    padding-top: 7.5px;
+    padding-bottom: 15px;
+}
+
 
 .institution-card-menu li>a {
     color: #fff;
@@ -276,6 +307,10 @@ ul {
         margin-top: 56px;
     }
     
+    .navbar-light .navbar-toggler {
+        border: none;
+    }
+
     .navbar-brand {
         font-family: var(--logo-font-type), serif;
     }
@@ -289,8 +324,12 @@ ul {
         background-color: #f8f9fa !important;
     }
     
+    .institutions-wrap {
+        padding-top: 50px;
+    }
+    
     .institutions-wrap>.row>div {
-        margin: 20px;
+        margin-bottom: 50px;
     }
     
     
@@ -301,9 +340,25 @@ ul {
     .footer-info-part {
         font-size: .9rem;
     }
+    
 }
 
 @media (min-width: 576px) {
+    .institutions-wrap>.row>div {
+        margin-bottom: 50px;
+    }
+    
+    .institutions-wrap {
+        padding-top: 50px;
+    }
+    
+    .institution-card-menu li {
+        font-size: 20px;
+    }
+
+    .exhibitions-link-wrap {    
+        margin: 0 5rem;
+    }
 
 }
 
@@ -312,12 +367,24 @@ ul {
         width: 150px;
         height: 100px;
     }
+    
+    .institution-card-menu li {
+        font-size: 15px;
+    }
+    
+    .exhibitions-link-wrap {    
+        margin: 0 2rem;
+    }
 }
 
 @media (min-width: 992px) {
     .rpwe-img > img {
         width: 100%;
         height: 200px;
+    }
+    
+    .institution-card-menu li {
+        font-size: 20px;
     }
 
 }

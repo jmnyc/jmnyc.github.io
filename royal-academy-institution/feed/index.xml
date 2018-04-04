@@ -6,11 +6,11 @@
 	
 	>
 <channel>
-	<title>Comments on: Book 1</title>
-	<atom:link href="/book-1/feed/" rel="self" type="application/rss+xml" />
-	<link>/book-1/</link>
+	<title>Comments on: Royal Academy Institution</title>
+	<atom:link href="/royal-academy-institution/feed/" rel="self" type="application/rss+xml" />
+	<link>/royal-academy-institution/</link>
 	<description></description>
-	<lastBuildDate>Wed, 04 Apr 2018 00:58:52 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 04 Apr 2018 00:58:48 +0000</lastBuildDate>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=4.9.4</generator>
