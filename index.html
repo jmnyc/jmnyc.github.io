@@ -71,13 +71,18 @@
 </div><!-- Main Content -->
 <div class="container accordion-wrap">
     <div class="row home-accordion">
-        <div class="col-12">
-    <h2 class="text-center accordion-title">Special Programs</h2>
+        <div class="col-12 accordion-intro">
+    <h2 class="accordion-title text-center">
+        Special Programs
+    </h2>
+    <p class="accordion-blurb text-center">
+        Learn about our arts and science programs established by the Arthur M. Sackler foundation.
+    </p>
 </div>
 <div class="col-12 accordion-item">
-    <div class="accordion-item-header" id="headingOne">
+    <div class="accordion-item-header text-center" id="headingOne">
         <button class="accordion-btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" disabled>
-            Dame Jillian Sackler International Artists Exhibition Program
+            <span class="program-title d-md-inline d-block">Dame Jillian Sackler International Artists Exhibition Program</span><span class="program-read-more">read more <span class="fas fa-angle-down"></span></span>
         </button>
     </div>
 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent=".home-accordion">
@@ -88,11 +93,11 @@
   </div>
 </div>
 </div>
-
+<hr class="programs-hr" />
 <div class="col-12 accordion-item">
-    <div class="accordion-item-header" id="headingTwo">
+    <div class="accordion-item-header text-center" id="headingTwo">
         <button class="accordion-btn collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            Arthur M. Sackler Colloquia of the National Academy of Sciences
+            <span class="program-title d-md-inline d-block">Arthur M. Sackler Colloquia of the National Academy of Sciences</span><span class="program-read-more">read more <span class="fas fa-angle-down"></span></span>
         </button>
     </div>
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent=".home-accordion">
@@ -172,8 +177,8 @@ var metaslider_103 = function($) {
                 nav:true,
                 pause:false,
                 speed:800,
-                prevText:"&lt;i class=&quot;fas fa-angle-left&quot;&gt;&lt;/i&gt;",
-                nextText:"  &gt;",
+                prevText:false,
+                nextText:false,
                 auto:true
             });
         };

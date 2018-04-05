@@ -7,7 +7,7 @@ Version: 1.0
 /* Typography
 */
 
-@import url('https://fonts.googleapis.com/css?family=Poppins|Playfair+Display|Vollkorn');
+@import url('https://fonts.googleapis.com/css?family=Poppins|Playfair+Display');
 
 /* Variables
 */
@@ -15,7 +15,6 @@ Version: 1.0
 :root {
     --main-font-type: 'Poppins';
     --logo-font-type: 'Playfair Display';
-    --special-font-type: 'Vollkorn';
 
     --fb-color: #3b5998;
     --twitter-color: #1da1f2;
@@ -41,8 +40,8 @@ a:hover {
 }
 
 ul {
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 }
 
 /* Content
@@ -53,7 +52,7 @@ ul {
 
 .logo {
 	font-family: var(--logo-font-type), serif;
-	padding: 20px 0px;
+    padding: 1rem 0 0;
 }
 
 
@@ -68,7 +67,7 @@ ul {
 */
 
 i.fas.fa-angle-left, i.fas.fa-angle-right {
-    font-size: 40px;
+    font-size: 3rem;
     color: rgba(255, 255, 255, .8);
 }
 
@@ -79,16 +78,75 @@ i.fas.fa-angle-left, i.fas.fa-angle-right {
 	display: none;
 }
 
+.accordion-intro {
+    margin: 3.5rem 0 2.5rem;
+}
 .accordion-title {
-    font-family: var(--special-font-type), serif;
-    font-style: italic;
-    text-decoration: underline;    
+    font-weight: bold;
+    background: #005bd6;
+    background: -webkit-linear-gradient(to right, #fff, #005bd6, #00a7d, #fff);
+    background: linear-gradient(to right, #fff, #005bd6, #00a7dc, #fff);
+    color: #fff;
+    padding: 1rem 0;
 }
 
-.accordion-btn {
+.accordion-blurb {
+    font-size: 1.2rem;
+    color: #737373;
+}
+
+.accordion-item-header {
+    padding: 1rem 0;
+}
+
+.programs-hr {
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.accordion-btn  {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: bold;
     width: 100%;
+    font-size: 1.2rem;
 }
 
+.accordion-btn:focus {
+    outline-style: none;
+    box-shadow:none;
+    border-color:transparent;
+}
+
+.accordion-btn:hover {
+    color: #005bd6;
+}
+
+.accordion-btn.collapsed:hover>.program-read-more {
+    border: 1px solid #005bd6;
+    background: #005bd6;
+    color: #fff;
+}
+
+.accordion-btn:disabled {
+    color: #b5b5b5;
+}
+
+.accordion-btn:disabled>.program-read-more {
+    border: 1px solid #b5b5b5;
+}
+
+.accordion-item-body {
+    line-height: 1.8rem;
+}
+.program-read-more {
+    margin-left: .2rem;
+    font-size: .8rem;
+    border: 1px solid #000;
+    vertical-align: middle;
+    padding: .2rem .4rem;
+    border-radius: .3rem;
+}
 
 /* Institutions
 */
@@ -134,19 +192,18 @@ i.fas.fa-angle-left, i.fas.fa-angle-right {
     font-weight: bold;
     list-style-type: none;
     text-shadow: 1px 1px rgba(0, 0, 0);
-    font-size: 20px;
 }
 
 .exhibitions-link-wrap {    
-    padding-top: 15px;
-    padding-bottom: 7.5px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     border-bottom: 1px solid;
     margin: 0 5rem;
 }
 
 .information-link-wrap {
-    padding-top: 7.5px;
-    padding-bottom: 15px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 
@@ -158,16 +215,6 @@ i.fas.fa-angle-left, i.fas.fa-angle-right {
 
 /* Exhibitions
 */
-
-.exhibition-post {
-    width: 300px !important;
-    height: auto;
-}
-
-.exhibition-thumbnail img {
-    width: 300px !important;
-    height: 200px !important;
-}
 
 
 /* Recent Exhibitions
@@ -248,7 +295,7 @@ i.fas.fa-angle-left, i.fas.fa-angle-right {
 }
 
 .social-icons {
-    font-size: 20px;
+    font-size: 1.2rem;
 }
 
 .social-icons > div {
@@ -336,16 +383,20 @@ i.fas.fa-angle-left, i.fas.fa-angle-right {
     }
     
     i.fas.fa-angle-left, i.fas.fa-angle-right {
-        font-size: 20px;
+        font-size: 1.5rem;
         line-height: unset;
     }
     
     .institutions-wrap {
-        padding-top: 50px;
+        padding-top: 3rem;
     }
     
     .institutions-wrap>.row>div {
-        margin-bottom: 50px;
+        margin-bottom: 3rem;
+    }
+
+    .institution-card-menu li {
+        font-size: 1rem;
     }
     
     
@@ -360,16 +411,21 @@ i.fas.fa-angle-left, i.fas.fa-angle-right {
 }
 
 @media (min-width: 576px) {
-    .institutions-wrap>.row>div {
-        margin-bottom: 50px;
+    
+    .accordion-btn {
+        font-size: 1rem;
     }
     
     .institutions-wrap {
-        padding-top: 50px;
+        padding-top: 3rem;
+    }
+    
+    .institutions-wrap>.row>div {
+        margin-bottom: 3rem;
     }
     
     .institution-card-menu li {
-        font-size: 20px;
+        font-size: 1.2rem;
     }
 
     .exhibitions-link-wrap {    
@@ -379,13 +435,14 @@ i.fas.fa-angle-left, i.fas.fa-angle-right {
 }
 
 @media (min-width: 768px) {
+    
     .rpwe-img > img {
         width: 150px;
         height: 100px;
     }
     
     .institution-card-menu li {
-        font-size: 15px;
+        font-size: 1rem;
     }
     
     .exhibitions-link-wrap {    
@@ -400,7 +457,7 @@ i.fas.fa-angle-left, i.fas.fa-angle-right {
     }
     
     .institution-card-menu li {
-        font-size: 20px;
+        font-size: 1.2rem;
     }
 
 }
