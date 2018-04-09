@@ -7,21 +7,80 @@ Version: 1.0
 /* Typography
 */
 
-@import url('https://fonts.googleapis.com/css?family=Poppins|Playfair+Display');
+@font-face {
+    font-family: 'Playfair';
+    src: url('/wp-content/themes/frostbolt/resources/fonts/Playfair_Display/PlayfairDisplay-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Playfair';
+    src: url('/wp-content/themes/frostbolt/resources/fonts/Playfair_Display/PlayfairDisplay-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Playfair';
+    src: url('/wp-content/themes/frostbolt/resources/fonts/Playfair_Display/PlayfairDisplay-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/wp-content/themes/frostbolt/resources/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('/wp-content/themes/frostbolt/resources/fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('/wp-content/themes/frostbolt/resources/fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('/wp-content/themes/frostbolt/resources/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('/wp-content/themes/frostbolt/resources/fonts/Poppins/Poppins-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('/wp-content/themes/frostbolt/resources/fonts/Poppins/Poppins-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
 
 /* Variables
 */
 
 :root {
     --main-font-type: 'Poppins';
-    --logo-font-type: 'Playfair Display';
-
+    --title-font-type: 'Playfair';
+    
+    --logo-color: #03a9f4;
+    --main-color: #007ac1;
+    
+    --primary-gradient-color: #005bd6;
+    --secondary-gradient-color: #00a7dc;
+    
     --fb-color: #3b5998;
     --twitter-color: #1da1f2;
     --linkedin-color: #0077b5;
     --google-plus-color: #db4437;  
 }
-
 
 /* Global Styles
 */
@@ -46,13 +105,19 @@ ul {
 
 /* Content
 */
-
+.content {
+    display: none;
+}
 /* Logo
 */
 
 .logo {
-	font-family: var(--logo-font-type), serif;
+	font-family: var(--title-font-type), serif;
     padding: 1rem 0 0;
+}
+
+.logo a {
+    color: var(--logo-color);
 }
 
 
@@ -66,7 +131,7 @@ ul {
 /* Home Carousel
 */
 
-i.fas.fa-angle-left, i.fas.fa-angle-right {
+.rslides_nav .fa-angle-left, .rslides_nav .fa-angle-right {
     font-size: 3rem;
     color: rgba(255, 255, 255, .8);
 }
@@ -74,42 +139,36 @@ i.fas.fa-angle-left, i.fas.fa-angle-right {
 /* Home Accordion
 */
 
-.home-accordion {
-	display: none;
+.accordion-wrap {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
-.accordion-intro {
-    margin: 3.5rem 0 2.5rem;
-}
 .accordion-title {
-    font-weight: bold;
+    font-family: var(--title-font-type), serif;
+    font-weight: 900;
+/*
     background: #005bd6;
-    background: -webkit-linear-gradient(to right, #fff, #005bd6, #00a7d, #fff);
-    background: linear-gradient(to right, #fff, #005bd6, #00a7dc, #fff);
-    color: #fff;
-    padding: 1rem 0;
+    background: -webkit-linear-gradient(to right, var(--white), #005bd6, #00a7d, var(--white));
+    background: linear-gradient(to right, var(--white), #005bd6, #00a7dc, var(--white));
+*/
+    color: var(--main-color);
 }
 
 .accordion-blurb {
-    font-size: 1.2rem;
-    color: #737373;
-}
-
-.accordion-item-header {
-    padding: 1rem 0;
-}
-
-.programs-hr {
-    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    font-size: 1.1rem;
 }
 
 .accordion-btn  {
     border: none;
     background: none;
     cursor: pointer;
-    font-weight: bold;
-    width: 100%;
-    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0;
+}
+
+.program-title {
+    font-size: 1.5rem;
 }
 
 .accordion-btn:focus {
@@ -119,33 +178,17 @@ i.fas.fa-angle-left, i.fas.fa-angle-right {
 }
 
 .accordion-btn:hover {
-    color: #005bd6;
-}
-
-.accordion-btn.collapsed:hover>.program-read-more {
-    border: 1px solid #005bd6;
-    background: #005bd6;
-    color: #fff;
+    color: var(--main-color);
 }
 
 .accordion-btn:disabled {
-    color: #b5b5b5;
-}
-
-.accordion-btn:disabled>.program-read-more {
-    border: 1px solid #b5b5b5;
+    color: var(--gray);
+    cursor: default;
 }
 
 .accordion-item-body {
     line-height: 1.8rem;
-}
-.program-read-more {
-    margin-left: .2rem;
-    font-size: .8rem;
-    border: 1px solid #000;
-    vertical-align: middle;
-    padding: .2rem .4rem;
-    border-radius: .3rem;
+    padding-top: 1rem;
 }
 
 /* Institutions
@@ -156,9 +199,9 @@ i.fas.fa-angle-left, i.fas.fa-angle-right {
 }
 
 .card-body {
-    background: #005bd6;
-    background: -webkit-linear-gradient(to right, #005bd6, #00a7dc);
-    background: linear-gradient(to right, #005bd6, #00a7dc);
+    background: var(--primary-gradient-color);
+    background: -webkit-linear-gradient(to right, var(--primary-gradient-color), var(--secondary-gradient-color));
+    background: linear-gradient(to right, var(--primary-gradient-color), var(--secondary-gradient-color));
     background-repeat: no-repeat;
     background-size: 100% 100%;
     border-radius: 0.3rem 0.3rem 0 0;
@@ -167,7 +210,8 @@ i.fas.fa-angle-left, i.fas.fa-angle-right {
 
 .card-title {
     margin-bottom: 0;
-    font-family: var(--logo-font-type), serif;
+    font-family: var(--title-font-type), serif;
+    font-weight: 700;
 }
 
 .card-title>a {
@@ -182,14 +226,14 @@ i.fas.fa-angle-left, i.fas.fa-angle-right {
     position: absolute;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
+    color: var(--white);
     width: 100%;
     text-align: center;
 }
 
 .institution-card-menu li {
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 700;
     list-style-type: none;
     text-shadow: 1px 1px rgba(0, 0, 0);
 }
@@ -208,7 +252,7 @@ i.fas.fa-angle-left, i.fas.fa-angle-right {
 
 
 .institution-card-menu li>a {
-    color: #fff;
+    color: var(--white);
 }
 
 
@@ -220,9 +264,27 @@ i.fas.fa-angle-left, i.fas.fa-angle-right {
 /* Recent Exhibitions
 */
 
+.recent-exhibitions {
+    background-color: var(--gray-dark);
+    margin-bottom: 3rem;
+    color: var(--white);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.recent-exhibitions a {
+    color: var(--white);
+}
+
+.recent-exhibitions-title {
+    font-family: var(--title-font-type), serif;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
 .rpwe-img > img {
     width: 100%;
-    height: 250px;
+    height: 350px;
 }
 
 .rpwe-alignleft {
@@ -264,7 +326,7 @@ i.fas.fa-angle-left, i.fas.fa-angle-right {
 .newsletter-input {
     width: 100%;
     border: none;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid var(--dark);
 }
 
 .newsletter-button-wrap {
@@ -291,7 +353,7 @@ i.fas.fa-angle-left, i.fas.fa-angle-right {
 */
 
 .social-icon {
-    color: #fff;
+    color: var(--white);
 }
 
 .social-icons {
@@ -304,7 +366,7 @@ i.fas.fa-angle-left, i.fas.fa-angle-right {
     display: inline;
 }
 .social-icons a {
-    color: #000;
+    color: var(--dark);
     text-decoration: none;
 }
 
@@ -370,7 +432,7 @@ i.fas.fa-angle-left, i.fas.fa-angle-right {
     }
 
     .navbar-brand {
-        font-family: var(--logo-font-type), serif;
+        font-family: var(--title-font-type), serif;
     }
     
     .navbar {
@@ -387,6 +449,10 @@ i.fas.fa-angle-left, i.fas.fa-angle-right {
         line-height: unset;
     }
     
+    .accordion-blurb {
+        font-size: 1rem;
+    }
+    
     .institutions-wrap {
         padding-top: 3rem;
     }
@@ -399,9 +465,9 @@ i.fas.fa-angle-left, i.fas.fa-angle-right {
         font-size: 1rem;
     }
     
-    
-    .rpwe-title {
-        font-size: 1rem;
+    .rpwe-img > img {
+    width: 100%;
+    height: 250px;
     }
     
     .footer-info-part {
@@ -412,8 +478,8 @@ i.fas.fa-angle-left, i.fas.fa-angle-right {
 
 @media (min-width: 576px) {
     
-    .accordion-btn {
-        font-size: 1rem;
+    .program-title {
+        font-size: 1.3rem;
     }
     
     .institutions-wrap {
@@ -437,8 +503,8 @@ i.fas.fa-angle-left, i.fas.fa-angle-right {
 @media (min-width: 768px) {
     
     .rpwe-img > img {
-        width: 150px;
-        height: 100px;
+        width: 180px;
+        height: 120px;
     }
     
     .institution-card-menu li {
@@ -451,9 +517,14 @@ i.fas.fa-angle-left, i.fas.fa-angle-right {
 }
 
 @media (min-width: 992px) {
+    
+    .program-title {
+        font-size: 1.5rem;
+    }
+    
     .rpwe-img > img {
         width: 100%;
-        height: 200px;
+        height: 250px;
     }
     
     .institution-card-menu li {

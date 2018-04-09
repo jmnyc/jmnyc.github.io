@@ -16,7 +16,7 @@
         /* Home accordion
         */
 
-        $(".home-accordion").fadeIn(1500);
+        $(".content").fadeIn(800);
         
         $(".accordion-item").on("click", function() {
             
