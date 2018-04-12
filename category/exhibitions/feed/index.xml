@@ -12,12 +12,42 @@
 	<atom:link href="/category/exhibitions/feed/" rel="self" type="application/rss+xml" />
 	<link></link>
 	<description></description>
-	<lastBuildDate>Mon, 09 Apr 2018 02:15:30 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 12 Apr 2018 00:42:28 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=4.9.4</generator>
 	<item>
+		<title>Beijing exhibition 4</title>
+		<link>/beijing-exhibition-4/</link>
+		<comments>/beijing-exhibition-4/#respond</comments>
+		<pubDate>Tue, 10 Apr 2018 00:06:04 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+				<category><![CDATA[Exhibitions]]></category>
+		<category><![CDATA[Beijing]]></category>
+
+		<guid isPermaLink="false">/?p=115</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[]]></content:encoded>
+			<wfw:commentRss>/beijing-exhibition-4/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Beijing exhibition 3</title>
+		<link>/beijing-exhibition-3/</link>
+		<comments>/beijing-exhibition-3/#respond</comments>
+		<pubDate>Tue, 10 Apr 2018 00:05:24 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+				<category><![CDATA[Exhibitions]]></category>
+		<category><![CDATA[Beijing]]></category>
+
+		<guid isPermaLink="false">/?p=112</guid>
+		<description><![CDATA[]]></description>
+				<content:encoded><![CDATA[]]></content:encoded>
+			<wfw:commentRss>/beijing-exhibition-3/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
 		<title>New York 2</title>
 		<link>/new-york-2/</link>
 		<comments>/new-york-2/#respond</comments>
@@ -28,7 +58,8 @@
 
 		<guid isPermaLink="false">/?p=89</guid>
 		<description><![CDATA[Etiam enim magna, rutrum ut ornare eu, lobortis iaculis quam. Suspendisse leo enim, mollis vitae quam nec, varius facilisis augue. Aliquam vel quam et lectus pretium sollicitudin. Proin vehicula, nisi id bibendum tristique, odio libero interdum quam, at pharetra ex sem ac ligula. Lorem ipsum dolor sit amet,]]></description>
-				<content:encoded><![CDATA[Etiam enim magna, rutrum ut ornare eu, lobortis iaculis quam. Suspendisse leo enim, mollis vitae quam nec, varius facilisis augue. Aliquam vel quam et lectus pretium sollicitudin. Proin vehicula, nisi id bibendum tristique, odio libero interdum quam, at pharetra ex sem ac ligula. Lorem ipsum dolor sit amet, ]]></content:encoded>
+				<content:encoded><![CDATA[<p>Etiam enim magna, rutrum ut ornare eu, lobortis iaculis quam. Suspendisse leo enim, mollis vitae quam nec, varius facilisis augue. Aliquam vel quam et lectus pretium sollicitudin. Proin vehicula, nisi id bibendum tristique, odio libero interdum quam, at pharetra ex sem ac ligula. Lorem ipsum dolor sit amet, </p>
+]]></content:encoded>
 			<wfw:commentRss>/new-york-2/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 		</item>
@@ -43,7 +74,8 @@
 
 		<guid isPermaLink="false">http://127.0.0.1/edsa-wpdev/?p=81</guid>
 		<description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur justo vitae gravida faucibus. Duis dictum mauris sapien, at ornare eros mollis vel. Etiam eget luctus lacus. Mauris sollicitudin scelerisque suscipit. Proin faucibus ipsum tellus. Maecenas vel tortor aliquam, auctor justo quis, venenatis eros. In tellus erat, ornare sed faucibus vel, dignissim vitae nisi. Curabitur [&#8230;]]]></description>
-				<content:encoded><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur justo vitae gravida faucibus. Duis dictum mauris sapien, at ornare eros mollis vel. Etiam eget luctus lacus. Mauris sollicitudin scelerisque suscipit. Proin faucibus ipsum tellus. Maecenas vel tortor aliquam, auctor justo quis, venenatis eros. In tellus erat, ornare sed faucibus vel, dignissim vitae nisi. Curabitur elementum ipsum et quam tincidunt tristique. Nulla porttitor, mi quis mollis tincidunt, mi felis condimentum massa, non ultrices massa eros vitae lorem. Integer fermentum interdum ante eget malesuada. Morbi mollis tincidunt massa ac ultrices. Sed pretium turpis non auctor euismod. Cras quis commodo urna. Vestibulum consectetur at dolor varius venenatis. Nulla pharetra, quam quis pellentesque fringilla, urna justo congue lectus, eu convallis mi nisi sit amet ligula.]]></content:encoded>
+				<content:encoded><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur justo vitae gravida faucibus. Duis dictum mauris sapien, at ornare eros mollis vel. Etiam eget luctus lacus. Mauris sollicitudin scelerisque suscipit. Proin faucibus ipsum tellus. Maecenas vel tortor aliquam, auctor justo quis, venenatis eros. In tellus erat, ornare sed faucibus vel, dignissim vitae nisi. Curabitur elementum ipsum et quam tincidunt tristique. Nulla porttitor, mi quis mollis tincidunt, mi felis condimentum massa, non ultrices massa eros vitae lorem. Integer fermentum interdum ante eget malesuada. Morbi mollis tincidunt massa ac ultrices. Sed pretium turpis non auctor euismod. Cras quis commodo urna. Vestibulum consectetur at dolor varius venenatis. Nulla pharetra, quam quis pellentesque fringilla, urna justo congue lectus, eu convallis mi nisi sit amet ligula.</p>
+]]></content:encoded>
 			<wfw:commentRss>/beijing-exhibition-2/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 		</item>
@@ -58,7 +90,8 @@
 
 		<guid isPermaLink="false">http://127.0.0.1/edsa-wpdev/?p=44</guid>
 		<description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu eros a tortor vestibulum lacinia quis sit amet magna. Praesent ut elit eu ante consequat hendrerit. Quisque suscipit nisl ut risus congue rutrum. Ut suscipit, dui non tincidunt consequat, metus velit gravida dolor, nec varius ante odio porttitor nibh. Proin sagittis tristique quam id commodo. [&#8230;]]]></description>
-				<content:encoded><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu eros a tortor vestibulum lacinia quis sit amet magna. Praesent ut elit eu ante consequat hendrerit. Quisque suscipit nisl ut risus congue rutrum. Ut suscipit, dui non tincidunt consequat, metus velit gravida dolor, nec varius ante odio porttitor nibh. Proin sagittis tristique quam id commodo. Donec varius pretium posuere. Praesent vestibulum odio a nunc porttitor pulvinar. Aenean ultrices luctus nisi, id aliquet purus interdum a.]]></content:encoded>
+				<content:encoded><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu eros a tortor vestibulum lacinia quis sit amet magna. Praesent ut elit eu ante consequat hendrerit. Quisque suscipit nisl ut risus congue rutrum. Ut suscipit, dui non tincidunt consequat, metus velit gravida dolor, nec varius ante odio porttitor nibh. Proin sagittis tristique quam id commodo. Donec varius pretium posuere. Praesent vestibulum odio a nunc porttitor pulvinar. Aenean ultrices luctus nisi, id aliquet purus interdum a.</p>
+]]></content:encoded>
 			<wfw:commentRss>/new-york-exhibition/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 		</item>
@@ -73,7 +106,8 @@
 
 		<guid isPermaLink="false">http://127.0.0.1/edsa-wpdev/?p=30</guid>
 		<description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu eros a tortor vestibulum lacinia quis sit amet magna. Praesent ut elit eu ante consequat hendrerit. Quisque suscipit nisl ut risus congue rutrum. Ut suscipit, dui non tincidunt consequat, metus velit gravida dolor, nec varius ante odio porttitor nibh. Proin sagittis tristique quam id commodo. [&#8230;]]]></description>
-				<content:encoded><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu eros a tortor vestibulum lacinia quis sit amet magna. Praesent ut elit eu ante consequat hendrerit. Quisque suscipit nisl ut risus congue rutrum. Ut suscipit, dui non tincidunt consequat, metus velit gravida dolor, nec varius ante odio porttitor nibh. Proin sagittis tristique quam id commodo. Donec varius pretium posuere. Praesent vestibulum odio a nunc porttitor pulvinar. Aenean ultrices luctus nisi, id aliquet purus interdum a.]]></content:encoded>
+				<content:encoded><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu eros a tortor vestibulum lacinia quis sit amet magna. Praesent ut elit eu ante consequat hendrerit. Quisque suscipit nisl ut risus congue rutrum. Ut suscipit, dui non tincidunt consequat, metus velit gravida dolor, nec varius ante odio porttitor nibh. Proin sagittis tristique quam id commodo. Donec varius pretium posuere. Praesent vestibulum odio a nunc porttitor pulvinar. Aenean ultrices luctus nisi, id aliquet purus interdum a.</p>
+]]></content:encoded>
 			<wfw:commentRss>/washingtondc-exhibition/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 		</item>
@@ -88,7 +122,8 @@
 
 		<guid isPermaLink="false">http://127.0.0.1/edsa-wpdev/?p=26</guid>
 		<description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet dui nec mauris tempus rutrum sit amet et neque. Etiam ut aliquam dui. Cras commodo enim metus, ut pellentesque dui ultrices at. Maecenas rutrum elit justo, ac mattis lorem congue ac. Curabitur sit amet elementum enim. Sed non bibendum nisi. Etiam ultrices quis ipsum [&#8230;]]]></description>
-				<content:encoded><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet dui nec mauris tempus rutrum sit amet et neque. Etiam ut aliquam dui. Cras commodo enim metus, ut pellentesque dui ultrices at. Maecenas rutrum elit justo, ac mattis lorem congue ac. Curabitur sit amet elementum enim. Sed non bibendum nisi. Etiam ultrices quis ipsum at efficitur. Nam maximus urna sit amet convallis egestas. Donec maximus enim sed facilisis molestie. Fusce tristique, dui ut luctus aliquam, dui odio interdum velit, porttitor venenatis massa dolor in justo.]]></content:encoded>
+				<content:encoded><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet dui nec mauris tempus rutrum sit amet et neque. Etiam ut aliquam dui. Cras commodo enim metus, ut pellentesque dui ultrices at. Maecenas rutrum elit justo, ac mattis lorem congue ac. Curabitur sit amet elementum enim. Sed non bibendum nisi. Etiam ultrices quis ipsum at efficitur. Nam maximus urna sit amet convallis egestas. Donec maximus enim sed facilisis molestie. Fusce tristique, dui ut luctus aliquam, dui odio interdum velit, porttitor venenatis massa dolor in justo.</p>
+]]></content:encoded>
 			<wfw:commentRss>/beijing-exhibition/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 		</item>

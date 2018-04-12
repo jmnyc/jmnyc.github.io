@@ -2,7 +2,26 @@
 (function ($) {
     "use strict";
     $(document).ready(function () {
-
+        
+//        function sameheight(div){
+//        /* Latest compiled and minified JavaScript included as External Resource */
+//
+//            var largest = 160;
+//            var findHeight = 0;
+//
+//            //loop through all title elements
+//            $(document).find(div).each(function(){
+//                findHeight = $(this).height();
+//                if(findHeight > largest){
+//                    largest = findHeight;
+//                }  
+//            });
+//
+//            $(document).find(div).css({"height":findHeight+"px"});
+//        };
+//        
+//        sameheight(".exhibition-title");
+        
         /* Bootstrap nav menu fix
         Adds nav-link class to nav anchor tag */
         
@@ -25,7 +44,7 @@
             
             if ($button.hasClass("collapsed")) {
                 $siblingButton.removeAttr("disabled");
-                setTimeout(function(){ $button.attr("disabled", "") }, 100);
+                setTimeout(function(){ $button.attr("disabled", "") }, 10);
             } 
 
         });

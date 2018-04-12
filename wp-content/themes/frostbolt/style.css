@@ -90,7 +90,6 @@ Version: 1.0
 }
 
 body {
-    height: 100%;
     font-family: var(--main-font-type), Arial, sans-serif;
 }
 
@@ -101,6 +100,10 @@ a:hover {
 ul {
 	margin: 0;
 	padding: 0;
+}
+
+#wrap {
+  min-height: 100%;
 }
 
 /* Content
@@ -145,8 +148,7 @@ ul {
 }
 
 .accordion-title {
-    font-family: var(--title-font-type), serif;
-    font-weight: 900;
+    font-weight: 700;
 /*
     background: #005bd6;
     background: -webkit-linear-gradient(to right, var(--white), #005bd6, #00a7d, var(--white));
@@ -155,8 +157,12 @@ ul {
     color: var(--main-color);
 }
 
+.accordion-intro {
+    margin-bottom: 1rem;
+}
+
 .accordion-blurb {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
 }
 
 .accordion-btn  {
@@ -179,6 +185,30 @@ ul {
 
 .accordion-btn:hover {
     color: var(--main-color);
+}
+
+.accordion-btn .program-expand {
+    -webkit-transition: -webkit-transform .4s ease-in-out;
+    -ms-transition: -ms-transform .4s ease-in-out;
+    transition: transform .4s ease-in-out;
+}
+
+.accordion-btn:disabled .program-expand {
+    transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+}
+
+.accordion-btn.collapsed:hover .program-expand {
+    transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+}
+
+.accordion-btn.collapsed:active .program-expand {
+    transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
 }
 
 .accordion-btn:disabled {
@@ -226,22 +256,21 @@ ul {
     position: absolute;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    color: var(--white);
     width: 100%;
     text-align: center;
+    color: var(--white);
 }
 
-.institution-card-menu li {
-    text-transform: uppercase;
+.institution-card-menu a {
     font-weight: 700;
-    list-style-type: none;
     text-shadow: 1px 1px rgba(0, 0, 0);
+    color: var(--white);
 }
 
 .exhibitions-link-wrap {    
     padding-top: 1rem;
     padding-bottom: 1rem;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid var(--white);
     margin: 0 5rem;
 }
 
@@ -250,21 +279,58 @@ ul {
     padding-bottom: 1rem;
 }
 
+/* Intro Posts
+*/
 
-.institution-card-menu li>a {
+.intro-container {
+    margin-top: 3rem;
+}
+
+.intro-wrap {
+    margin-bottom: 2rem;
+}
+
+.intro-title-wrap {
+    font-size: 1.5rem;
+    padding: .2rem;
+}
+
+.intro-title-link {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    transition: all .2s linear;
+}
+
+.intro-wrap:hover .intro-title-link {
     color: var(--white);
 }
 
+.intro-wrap:hover .intro-title-wrap {
+    background-color: var(--main-color);
+}
 
+.intro-thumb-wrap img {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
 
-/* Exhibitions
+/* Exhibitions Intro Posts
 */
 
+.exhibition-thumb-wrap img {
+    width: 315px;
+    height: 215px;
+}
 
 /* Recent Exhibitions
 */
 
-.recent-exhibitions {
+.recent-exhibitions-title {
+    font-family: var(--title-font-type), serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.recent-exhibitions-wrap {
     background-color: var(--gray-dark);
     margin-bottom: 3rem;
     color: var(--white);
@@ -272,14 +338,9 @@ ul {
     padding-bottom: 1rem;
 }
 
-.recent-exhibitions a {
+.recent-exhibitions-wrap a {
     color: var(--white);
-}
-
-.recent-exhibitions-title {
-    font-family: var(--title-font-type), serif;
-    font-weight: 900;
-    margin-bottom: 1rem;
+    transition: all .2s linear;
 }
 
 .rpwe-img > img {
@@ -441,7 +502,7 @@ ul {
         right: 0;
         left: 0;
         z-index: 1030;
-        background-color: #f8f9fa !important;
+        background-color: var(--light) !important;
     }
     
     i.fas.fa-angle-left, i.fas.fa-angle-right {
@@ -450,7 +511,7 @@ ul {
     }
     
     .accordion-blurb {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     
     .institutions-wrap {
@@ -461,7 +522,7 @@ ul {
         margin-bottom: 3rem;
     }
 
-    .institution-card-menu li {
+    .institution-card-menu {
         font-size: 1rem;
     }
     
@@ -490,12 +551,17 @@ ul {
         margin-bottom: 3rem;
     }
     
-    .institution-card-menu li {
+    .institution-card-menu {
         font-size: 1.2rem;
     }
 
     .exhibitions-link-wrap {    
         margin: 0 5rem;
+    }
+    
+    .exhibition-thumb-wrap img {
+        width: 510px;
+        height: 310px;
     }
 
 }
@@ -507,13 +573,19 @@ ul {
         height: 120px;
     }
     
-    .institution-card-menu li {
+    .institution-card-menu {
         font-size: 1rem;
     }
     
     .exhibitions-link-wrap {    
         margin: 0 2rem;
     }
+    
+    .exhibition-thumb-wrap img {
+        width: 330px;
+        height: 230px;
+    }
+    
 }
 
 @media (min-width: 992px) {
@@ -524,14 +596,25 @@ ul {
     
     .rpwe-img > img {
         width: 100%;
-        height: 250px;
+        height: 200px;
     }
     
-    .institution-card-menu li {
+    .institution-card-menu {
         font-size: 1.2rem;
+    }
+    
+    .exhibition-thumb-wrap img {
+        width: 290px;
+        height: 190px;
     }
 
 }
 
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+    
+    .rpwe-img > img {
+        width: 100%;
+        height: 250px;
+    }
+}
 
