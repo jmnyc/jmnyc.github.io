@@ -10,9 +10,9 @@
 	<atom:link href="/book-1/feed/" rel="self" type="application/rss+xml" />
 	<link>/book-1/</link>
 	<description></description>
-	<lastBuildDate>Thu, 12 Apr 2018 07:50:33 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 14 Apr 2018 10:35:13 +0000</lastBuildDate>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=4.9.4</generator>
+	<generator>https://wordpress.org/?v=4.9.5</generator>
 </channel>
 </rss>
