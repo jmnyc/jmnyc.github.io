@@ -128,10 +128,10 @@ ul {
 */
 
 
-/* Homepage
+/* Home Page
 */
 
-/* Home Carousel
+/* Home Slider
 */
 
 .rslides_nav .fa-angle-left, .rslides_nav .fa-angle-right {
@@ -330,7 +330,7 @@ ul {
 }
 
 .intro-thumb-wrap img {
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 /* Exhibitions Intro Posts
