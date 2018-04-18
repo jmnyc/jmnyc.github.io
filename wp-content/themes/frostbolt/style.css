@@ -512,7 +512,6 @@ ul {
 }
 
 .rpwe-title {
-    margin-top: .5rem;
     letter-spacing: 1px;
     font-family: var(--main-font-type), sans-serif;
 }
@@ -692,8 +691,17 @@ ul {
         font-size: 1rem;
     }
     
+    .rpwe-title {
+        margin-top: .3rem;
+        margin-bottom: 1.5rem;
+    }
+    
     .footer-info-part {
         font-size: .9rem;
+    }
+    
+    .newsletter-input-wrap {
+        margin-top: 1rem;
     }
     
 }
@@ -712,14 +720,15 @@ ul {
         margin: 0 5rem;
     }
     
+    .rpwe-title {
+        margin-top: .3rem;
+        margin-bottom: 1.5rem;
+    }
+    
     .exhibition-thumb-wrap img {
         width: 510px;
         height: 310px;
     }
-    
-
-    
-
 
 }
 
@@ -741,6 +750,11 @@ ul {
     .book-single-thumb img {
         width: 100%;
         height: auto;
+    }
+    
+    .rpwe-title {
+        margin-top: .5rem;
+        margin-bottom: .5rem;
     }
     
     .about-thumbnail-wrap img {
