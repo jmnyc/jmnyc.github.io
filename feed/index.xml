@@ -12,12 +12,61 @@
 	<atom:link href="/feed/" rel="self" type="application/rss+xml" />
 	<link></link>
 	<description>Dr. Arthur M. Sackler</description>
-	<lastBuildDate>Wed, 18 Apr 2018 01:21:46 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 18 Apr 2018 03:14:23 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>hourly</sy:updatePeriod>
 	<sy:updateFrequency>1</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=4.9.5</generator>
 	<item>
+		<title>Sackler Museum, Beijing</title>
+		<link>/beijing-institution/</link>
+		<comments>/beijing-institution/#respond</comments>
+		<pubDate>Wed, 18 Apr 2018 03:13:12 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+				<category><![CDATA[Arts]]></category>
+		<category><![CDATA[Beijing]]></category>
+
+		<guid isPermaLink="false">http://127.0.0.1/edsa-wpdev/?p=22</guid>
+		<description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in vehicula urna. Sed a dui sit amet magna posuere maximus. Nunc condimentum scelerisque turpis a elementum. Nunc congue urna id blandit hendrerit. Integer eu laoreet dui. Phasellus nec lorem sed mi condimentum blandit. Curabitur tempus ut risus et porta. Lorem ipsum dolor sit amet, consectetur [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in vehicula urna. Sed a dui sit amet magna posuere maximus. Nunc condimentum scelerisque turpis a elementum. Nunc congue urna id blandit hendrerit. Integer eu laoreet dui. Phasellus nec lorem sed mi condimentum blandit. Curabitur tempus ut risus et porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur nisi justo, accumsan nec ullamcorper vitae, dapibus a nunc. Vestibulum euismod risus non quam tristique suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam quis luctus elit, ut pulvinar erat. Nam a faucibus massa. Quisque tortor nisi, consequat in cursus congue, ultrices nec ante.</p>
+<p>Morbi iaculis lectus sit amet volutpat hendrerit. Vivamus at odio sed augue mattis hendrerit ut vitae magna. Mauris ut purus metus. Aliquam eu consectetur magna, in vehicula arcu. Nunc tincidunt velit eget pharetra egestas. Proin vehicula sollicitudin tellus vel elementum. Phasellus et nisi bibendum, dictum tortor at, pretium arcu. Maecenas id tincidunt dolor, nec pulvinar ligula. Suspendisse accumsan lobortis tincidunt. Nulla luctus volutpat nunc quis efficitur. Fusce venenatis, mi at consequat aliquam, erat orci sagittis sapien, nec euismod odio turpis ac tellus. Sed nec malesuada turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent sem tellus, sollicitudin et arcu eget, euismod molestie purus.</p>
+]]></content:encoded>
+			<wfw:commentRss>/beijing-institution/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Sackler Museum, Harvard University</title>
+		<link>/harvard-institution/</link>
+		<comments>/harvard-institution/#respond</comments>
+		<pubDate>Wed, 18 Apr 2018 03:11:04 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+				<category><![CDATA[Arts]]></category>
+
+		<guid isPermaLink="false">/?p=676</guid>
+		<description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in vehicula urna. Sed a dui sit amet magna posuere maximus. Nunc condimentum scelerisque turpis a elementum. Nunc congue urna id blandit hendrerit. Integer eu laoreet dui. Phasellus nec lorem sed mi condimentum blandit. Curabitur tempus ut risus et porta. Lorem ipsum dolor sit amet, consectetur [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in vehicula urna. Sed a dui sit amet magna posuere maximus. Nunc condimentum scelerisque turpis a elementum. Nunc congue urna id blandit hendrerit. Integer eu laoreet dui. Phasellus nec lorem sed mi condimentum blandit. Curabitur tempus ut risus et porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur nisi justo, accumsan nec ullamcorper vitae, dapibus a nunc. Vestibulum euismod risus non quam tristique suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam quis luctus elit, ut pulvinar erat. Nam a faucibus massa. Quisque tortor nisi, consequat in cursus congue, ultrices nec ante.</p>
+<p>Morbi iaculis lectus sit amet volutpat hendrerit. Vivamus at odio sed augue mattis hendrerit ut vitae magna. Mauris ut purus metus. Aliquam eu consectetur magna, in vehicula arcu. Nunc tincidunt velit eget pharetra egestas. Proin vehicula sollicitudin tellus vel elementum. Phasellus et nisi bibendum, dictum tortor at, pretium arcu. Maecenas id tincidunt dolor, nec pulvinar ligula. Suspendisse accumsan lobortis tincidunt. Nulla luctus volutpat nunc quis efficitur. Fusce venenatis, mi at consequat aliquam, erat orci sagittis sapien, nec euismod odio turpis ac tellus. Sed nec malesuada turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent sem tellus, sollicitudin et arcu eget, euismod molestie purus.</p>
+]]></content:encoded>
+			<wfw:commentRss>/harvard-institution/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Sackler Sculpture Gallery, New York</title>
+		<link>/sculpture-gallery/</link>
+		<comments>/sculpture-gallery/#respond</comments>
+		<pubDate>Wed, 18 Apr 2018 03:10:10 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+				<category><![CDATA[Arts]]></category>
+
+		<guid isPermaLink="false">/?p=672</guid>
+		<description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in vehicula urna. Sed a dui sit amet magna posuere maximus. Nunc condimentum scelerisque turpis a elementum. Nunc congue urna id blandit hendrerit. Integer eu laoreet dui. Phasellus nec lorem sed mi condimentum blandit. Curabitur tempus ut risus et porta. Lorem ipsum dolor sit amet, consectetur [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in vehicula urna. Sed a dui sit amet magna posuere maximus. Nunc condimentum scelerisque turpis a elementum. Nunc congue urna id blandit hendrerit. Integer eu laoreet dui. Phasellus nec lorem sed mi condimentum blandit. Curabitur tempus ut risus et porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur nisi justo, accumsan nec ullamcorper vitae, dapibus a nunc. Vestibulum euismod risus non quam tristique suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam quis luctus elit, ut pulvinar erat. Nam a faucibus massa. Quisque tortor nisi, consequat in cursus congue, ultrices nec ante.</p>
+<p>Morbi iaculis lectus sit amet volutpat hendrerit. Vivamus at odio sed augue mattis hendrerit ut vitae magna. Mauris ut purus metus. Aliquam eu consectetur magna, in vehicula arcu. Nunc tincidunt velit eget pharetra egestas. Proin vehicula sollicitudin tellus vel elementum. Phasellus et nisi bibendum, dictum tortor at, pretium arcu. Maecenas id tincidunt dolor, nec pulvinar ligula. Suspendisse accumsan lobortis tincidunt. Nulla luctus volutpat nunc quis efficitur. Fusce venenatis, mi at consequat aliquam, erat orci sagittis sapien, nec euismod odio turpis ac tellus. Sed nec malesuada turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent sem tellus, sollicitudin et arcu eget, euismod molestie purus.</p>
+]]></content:encoded>
+			<wfw:commentRss>/sculpture-gallery/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
 		<title>Beijing Exhibition 5</title>
 		<link>/beijing-exhibition-5/</link>
 		<comments>/beijing-exhibition-5/#respond</comments>
@@ -165,54 +214,6 @@ Price: N/A</p>
 <p>Morbi iaculis lectus sit amet volutpat hendrerit. Vivamus at odio sed augue mattis hendrerit ut vitae magna. Mauris ut purus metus. Aliquam eu consectetur magna, in vehicula arcu. Nunc tincidunt velit eget pharetra egestas. Proin vehicula sollicitudin tellus vel elementum. Phasellus et nisi bibendum, dictum tortor at, pretium arcu. Maecenas id tincidunt dolor, nec pulvinar ligula. Suspendisse accumsan lobortis tincidunt. Nulla luctus volutpat nunc quis efficitur. Fusce venenatis, mi at consequat aliquam, erat orci sagittis sapien, nec euismod odio turpis ac tellus. Sed nec malesuada turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent sem tellus, sollicitudin et arcu eget, euismod molestie purus.</p>
 ]]></content:encoded>
 			<wfw:commentRss>/book-5/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
-		</item>
-		<item>
-		<title>Book 4</title>
-		<link>/book-4/</link>
-		<comments>/book-4/#respond</comments>
-		<pubDate>Sat, 14 Apr 2018 18:35:35 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-				<category><![CDATA[Book]]></category>
-
-		<guid isPermaLink="false">/?p=554</guid>
-		<description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in vehicula urna. Sed a dui sit amet magna posuere maximus. Nunc condimentum scelerisque turpis a elementum. Nunc congue urna id blandit hendrerit. Integer eu laoreet dui. Phasellus nec lorem sed mi condimentum blandit. Curabitur tempus ut risus et porta. Lorem ipsum dolor sit amet, consectetur [&#8230;]]]></description>
-				<content:encoded><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in vehicula urna. Sed a dui sit amet magna posuere maximus. Nunc condimentum scelerisque turpis a elementum. Nunc congue urna id blandit hendrerit. Integer eu laoreet dui. Phasellus nec lorem sed mi condimentum blandit. Curabitur tempus ut risus et porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur nisi justo, accumsan nec ullamcorper vitae, dapibus a nunc. Vestibulum euismod risus non quam tristique suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam quis luctus elit, ut pulvinar erat. Nam a faucibus massa. Quisque tortor nisi, consequat in cursus congue, ultrices nec ante.</p>
-<p>Morbi iaculis lectus sit amet volutpat hendrerit. Vivamus at odio sed augue mattis hendrerit ut vitae magna. Mauris ut purus metus. Aliquam eu consectetur magna, in vehicula arcu. Nunc tincidunt velit eget pharetra egestas. Proin vehicula sollicitudin tellus vel elementum. Phasellus et nisi bibendum, dictum tortor at, pretium arcu. Maecenas id tincidunt dolor, nec pulvinar ligula. Suspendisse accumsan lobortis tincidunt. Nulla luctus volutpat nunc quis efficitur. Fusce venenatis, mi at consequat aliquam, erat orci sagittis sapien, nec euismod odio turpis ac tellus. Sed nec malesuada turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent sem tellus, sollicitudin et arcu eget, euismod molestie purus.</p>
-]]></content:encoded>
-			<wfw:commentRss>/book-4/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
-		</item>
-		<item>
-		<title>Book 3</title>
-		<link>/book-3/</link>
-		<comments>/book-3/#respond</comments>
-		<pubDate>Sat, 14 Apr 2018 18:35:08 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-				<category><![CDATA[Book]]></category>
-
-		<guid isPermaLink="false">/?p=552</guid>
-		<description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in vehicula urna. Sed a dui sit amet magna posuere maximus. Nunc condimentum scelerisque turpis a elementum. Nunc congue urna id blandit hendrerit. Integer eu laoreet dui. Phasellus nec lorem sed mi condimentum blandit. Curabitur tempus ut risus et porta. Lorem ipsum dolor sit amet, consectetur [&#8230;]]]></description>
-				<content:encoded><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in vehicula urna. Sed a dui sit amet magna posuere maximus. Nunc condimentum scelerisque turpis a elementum. Nunc congue urna id blandit hendrerit. Integer eu laoreet dui. Phasellus nec lorem sed mi condimentum blandit. Curabitur tempus ut risus et porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur nisi justo, accumsan nec ullamcorper vitae, dapibus a nunc. Vestibulum euismod risus non quam tristique suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam quis luctus elit, ut pulvinar erat. Nam a faucibus massa. Quisque tortor nisi, consequat in cursus congue, ultrices nec ante.</p>
-<p>Morbi iaculis lectus sit amet volutpat hendrerit. Vivamus at odio sed augue mattis hendrerit ut vitae magna. Mauris ut purus metus. Aliquam eu consectetur magna, in vehicula arcu. Nunc tincidunt velit eget pharetra egestas. Proin vehicula sollicitudin tellus vel elementum. Phasellus et nisi bibendum, dictum tortor at, pretium arcu. Maecenas id tincidunt dolor, nec pulvinar ligula. Suspendisse accumsan lobortis tincidunt. Nulla luctus volutpat nunc quis efficitur. Fusce venenatis, mi at consequat aliquam, erat orci sagittis sapien, nec euismod odio turpis ac tellus. Sed nec malesuada turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent sem tellus, sollicitudin et arcu eget, euismod molestie purus.</p>
-]]></content:encoded>
-			<wfw:commentRss>/book-3/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
-		</item>
-		<item>
-		<title>Book 2</title>
-		<link>/book-2/</link>
-		<comments>/book-2/#respond</comments>
-		<pubDate>Thu, 12 Apr 2018 00:42:28 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-				<category><![CDATA[Book]]></category>
-
-		<guid isPermaLink="false">http://127.0.0.1/edsa-frostbolt-dev/?p=138</guid>
-		<description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in vehicula urna. Sed a dui sit amet magna posuere maximus. Nunc condimentum scelerisque turpis a elementum. Nunc congue urna id blandit hendrerit. Integer eu laoreet dui. Phasellus nec lorem sed mi condimentum blandit. Curabitur tempus ut risus et porta. Lorem ipsum dolor sit amet, consectetur [&#8230;]]]></description>
-				<content:encoded><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in vehicula urna. Sed a dui sit amet magna posuere maximus. Nunc condimentum scelerisque turpis a elementum. Nunc congue urna id blandit hendrerit. Integer eu laoreet dui. Phasellus nec lorem sed mi condimentum blandit. Curabitur tempus ut risus et porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur nisi justo, accumsan nec ullamcorper vitae, dapibus a nunc. Vestibulum euismod risus non quam tristique suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam quis luctus elit, ut pulvinar erat. Nam a faucibus massa. Quisque tortor nisi, consequat in cursus congue, ultrices nec ante.</p>
-<p>Morbi iaculis lectus sit amet volutpat hendrerit. Vivamus at odio sed augue mattis hendrerit ut vitae magna. Mauris ut purus metus. Aliquam eu consectetur magna, in vehicula arcu. Nunc tincidunt velit eget pharetra egestas. Proin vehicula sollicitudin tellus vel elementum. Phasellus et nisi bibendum, dictum tortor at, pretium arcu. Maecenas id tincidunt dolor, nec pulvinar ligula. Suspendisse accumsan lobortis tincidunt. Nulla luctus volutpat nunc quis efficitur. Fusce venenatis, mi at consequat aliquam, erat orci sagittis sapien, nec euismod odio turpis ac tellus. Sed nec malesuada turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent sem tellus, sollicitudin et arcu eget, euismod molestie purus.</p>
-]]></content:encoded>
-			<wfw:commentRss>/book-2/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 		</item>
 	</channel>
