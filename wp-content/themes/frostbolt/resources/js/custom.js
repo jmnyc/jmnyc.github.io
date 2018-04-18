@@ -22,32 +22,33 @@
 //        
 //        sameheight(".exhibition-title");
         
-        /* Bootstrap nav menu fix
-        Adds nav-link class to nav anchor tag */
-        
+        /* Bootstrap nav menu fix Adds nav-link class to nav anchor tag 
+        */
         var i, menuItem = document.getElementsByClassName("menu-item"), menuItemAnchor = document.querySelectorAll(".menu-item>a");
-
         for (i = 0; i < menuItem.length; i += 1) {
             menuItem[i].classList.add("nav-item");
             menuItemAnchor[i].classList.add("nav-link");
         }
 
-        /* Home accordion
+        /* Home accordion 
         */
-
         $(".content").fadeIn(800);
         
         $(".accordion-item").on("click", function() {
-            
             var $button = $(this).find(".accordion-btn");
             var $siblingButton = $(this).siblings().find(".accordion-btn"); 
-            
             if ($button.hasClass("collapsed")) {
                 $siblingButton.removeAttr("disabled");
                 setTimeout(function(){ $button.attr("disabled", "") }, 10);
             } 
-
         });
+        
+        /* Post Content Formatting
+        */
+
+        $(".gallery-wrap").prepend($(".gallery"));
+        $(".exhibition-content-wrap").prepend($(".exhibition-post-thumbnail"));
+        $(".gallery-item a").attr("data-lightbox", "gallery");
 
 	});
 }(jQuery));
