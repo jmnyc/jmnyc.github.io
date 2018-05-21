@@ -1,3 +1,3 @@
 # jmnyc.github.io
 
-jmnyc.github.io
+https://jmnyc.github.io/
