@@ -1,177 +1,129 @@
-<!DOCTYPE HTML>
-<!--
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>J. Morantin</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+        <title>test</title>
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<span class="logo"><img src="images/logo.svg" alt="" /></span>
-						<h1>J. Morantin</h1>
-					</header>
+        <!-- Babylon.js -->
+        <script src="https://code.jquery.com/pep/0.4.2/pep.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
+        <script src="https://preview.babylonjs.com/ammo.js"></script>
+        <script src="https://preview.babylonjs.com/cannon.js"></script>
+        <script src="https://preview.babylonjs.com/Oimo.js"></script>
+        <script src="https://preview.babylonjs.com/gltf_validator.js"></script>
+        <script src="https://preview.babylonjs.com/earcut.min.js"></script>
+        <script src="https://preview.babylonjs.com/babylon.js"></script>
+        <script src="https://preview.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
+        <script src="https://preview.babylonjs.com/materialsLibrary/babylonjs.materials.min.js"></script>
+        <script src="https://preview.babylonjs.com/proceduralTexturesLibrary/babylonjs.proceduralTextures.min.js"></script>
+        <script src="https://preview.babylonjs.com/postProcessesLibrary/babylonjs.postProcess.min.js"></script>
+        <script src="https://preview.babylonjs.com/loaders/babylonjs.loaders.js"></script>
+        <script src="https://preview.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
+        <script src="https://preview.babylonjs.com/gui/babylon.gui.min.js"></script>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="#intro" class="active">Bio</a></li>
-							<li><a href="#first">Skills</a></li>
-							<li><a href="#second">Work</a></li>
-							<li><a href="#cta">Contact</a></li>
-						</ul>
-					</nav>
+        <style>
+            html, body {
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
 
-				<!-- Main -->
-					<div id="main">
+            #renderCanvas {
+                width: 100%;
+                height: 100%;
+                touch-action: none;
+            }
+        </style>
+    </head>
+<body>
+    <canvas id="renderCanvas"></canvas>
+    <script>
+        var canvas = document.getElementById("renderCanvas");
 
-						<!-- Introduction -->
-							<section id="intro" class="main">
-								<div class="spotlight">
-									<div class="content">
-										<header class="major">
-											<h2>Ipsum sed adipiscing</h2>
-										</header>
-										<p>Sed lorem ipsum dolor sit amet nullam consequat feugiat consequat magna
-										adipiscing magna etiam amet veroeros. Lorem ipsum dolor tempus sit cursus.
-										Tempus nisl et nullam lorem ipsum dolor sit amet aliquam.</p>
-										<ul class="actions">
-											<li><a href="generic.html" class="button">Learn More</a></li>
-										</ul>
-									</div>
-									<span class="image"><img src="images/pic01.jpg" alt="" /></span>
-								</div>
-							</section>
+        var createScene = function () {
+        
+            // This creates a basic Babylon Scene object (non-mesh)
+            var scene = new BABYLON.Scene(engine);
+        	scene.clearColor = BABYLON.Color3.Black();
+        
+            // This creates and positions a free camera (non-mesh)
+            var camera = new BABYLON.ArcRotateCamera("camera1", - Math.PI / 3, 5 * Math.PI / 12, 50, new BABYLON.Vector3(0, 5, 0), scene);
+        
+            // This attaches the camera to the canvas
+            camera.attachControl(canvas, true);
+            
+        	// var defaultGridMaterial = new BABYLON.GridMaterial("default", scene);
+        	// defaultGridMaterial.majorUnitFrequency = 5;
+        	// defaultGridMaterial.gridRatio = 0.5;
+        	
+        	// var sphere = BABYLON.Mesh.CreateSphere("sphere", 20, 9, scene);
+        	// sphere.position.y = 12;
+        	// sphere.position.x = -6;
+        	// sphere.material = defaultGridMaterial;
+        	
+         	// var knotMaterial = new BABYLON.GridMaterial("knotMaterial", scene);
+        	// knotMaterial.majorUnitFrequency = 8;
+        	// knotMaterial.minorUnitVisibility = 0.45;
+        	// knotMaterial.gridRatio = 0.3;
+        	// knotMaterial.mainColor = new BABYLON.Color3(0, 0, 0);
+        	// knotMaterial.lineColor = new BABYLON.Color3(0.0, 1.0, 0.0);
+        		
+         	// var knot = BABYLON.Mesh.CreateTorusKnot("knot", 3, 1, 128, 64, 2, 3, scene);
+        	// knot.position.y = 12.0;
+        	// knot.position.x = 6;
+        	// knot.material = knotMaterial;
+        
+            var groundMaterial = new BABYLON.GridMaterial("groundMaterial", scene);
+        	groundMaterial.majorUnitFrequency = 5;
+        	groundMaterial.minorUnitVisibility = 0.45;
+        	groundMaterial.gridRatio = 2;
+        	groundMaterial.backFaceCulling = false;
+        	groundMaterial.mainColor = new BABYLON.Color3(1, 1, 1);
+        	groundMaterial.lineColor = new BABYLON.Color3(1.0, 1.0, 1.0);
+        	groundMaterial.opacity = 0.98;
+        
+        	var ground = BABYLON.Mesh.CreateGroundFromHeightMap("ground", "textures/heightMap.png", 100, 100, 100, 0, 10, scene, false);
+        	ground.material = groundMaterial;
+        
+        	var skyMaterial = new BABYLON.GridMaterial("skyMaterial", scene);
+        	skyMaterial.majorUnitFrequency = 6;
+        	skyMaterial.minorUnitVisibility = 0.43;
+        	skyMaterial.gridRatio = 0.5;
+        	skyMaterial.mainColor = new BABYLON.Color3(0, 0.05, 0.2);
+        	skyMaterial.lineColor = new BABYLON.Color3(0, 1.0, 1.0);	
+        	skyMaterial.backFaceCulling = false;
+        	
+        	var skySphere = BABYLON.Mesh.CreateSphere("skySphere", 30, 110, scene);
+        	skySphere.material = skyMaterial;
+        	
+        	// engine.runRenderLoop(function () {
+        	// 	camera.alpha += 0.003;
+        	// });	
+        	scene.registerBeforeRender(function () {
+                //scene.getMeshByName("ground").rotation.y += 0.0005;
+                scene.getMeshByName("skySphere").rotation.y += 0.0005;
+            });
+            
+            return scene;
+        };
+__createScene = createScene;
+        
+        var engine = new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true });
+        var scene = createScene();
 
-						<!-- First Section -->
-							<section id="first" class="main special">
-								<header class="major">
-									<h2>Magna veroeros</h2>
-								</header>
-								<ul class="features">
-									<li>
-										<span class="icon solid major style1 fa-code"></span>
-										<h3>Ipsum consequat</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-									</li>
-									<li>
-										<span class="icon major style3 fa-copy"></span>
-										<h3>Amed sed feugiat</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-									</li>
-									<li>
-										<span class="icon major style5 fa-gem"></span>
-										<h3>Dolor nullam</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-									</li>
-								</ul>
-								<footer class="major">
-									<ul class="actions special">
-										<li><a href="generic.html" class="button">Learn More</a></li>
-									</ul>
-								</footer>
-							</section>
+        engine.runRenderLoop(function () {
+            if (scene) {
+                scene.render();
+            }
+        });
 
-						<!-- Second Section -->
-							<section id="second" class="main special">
-								<header class="major">
-									<h2>Ipsum consequat</h2>
-									<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-									posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
-								</header>
-								<ul class="statistics">
-									<li class="style1">
-										<span class="icon solid fa-code-branch"></span>
-										<strong>5,120</strong> Etiam
-									</li>
-									<li class="style2">
-										<span class="icon fa-folder-open"></span>
-										<strong>8,192</strong> Magna
-									</li>
-									<li class="style3">
-										<span class="icon solid fa-signal"></span>
-										<strong>2,048</strong> Tempus
-									</li>
-									<li class="style4">
-										<span class="icon solid fa-laptop"></span>
-										<strong>4,096</strong> Aliquam
-									</li>
-									<li class="style5">
-										<span class="icon fa-gem"></span>
-										<strong>1,024</strong> Nullam
-									</li>
-								</ul>
-								<p class="content">Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</p>
-								<footer class="major">
-									<ul class="actions special">
-										<li><a href="generic.html" class="button">Learn More</a></li>
-									</ul>
-								</footer>
-							</section>
-
-						<!-- Get Started -->
-							<section id="cta" class="main special">
-								<header class="major">
-									<h2>Congue imperdiet</h2>
-									<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-									posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
-								</header>
-								<footer class="major">
-									<ul class="actions special">
-										<li><a href="generic.html" class="button primary">Get Started</a></li>
-									</ul>
-								</footer>
-							</section>
-
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<h2>Aliquam sed mauris</h2>
-							<p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
-							<ul class="actions">
-								<li><a href="generic.html" class="button">Learn More</a></li>
-							</ul>
-						</section>
-						<section>
-							<h2>Etiam feugiat</h2>
-							<dl class="alt">
-								<dt>Location</dt>
-								<dd>1234 Pl &bull; New York 00000 &bull; USA</dd>
-								<dt>Phone</dt>
-								<dd>(000) 000-0000</dd>
-								<dt>Email</dt>
-								<dd><a href="#">information@email.com</a></dd>
-							</dl>
-							<ul class="icons">
-								<li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-							</ul>
-						</section>
-						<p class="copyright">&copy; J. Morantin</p>
-					</footer>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+        // Resize
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+    </script>
+</body>
 </html>
