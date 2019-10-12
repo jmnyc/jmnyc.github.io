@@ -1,129 +1,48 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-        <title>test</title>
+    <title>test</title>
 
-        <!-- Babylon.js -->
-        <script src="https://code.jquery.com/pep/0.4.2/pep.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
-        <script src="https://preview.babylonjs.com/ammo.js"></script>
-        <script src="https://preview.babylonjs.com/cannon.js"></script>
-        <script src="https://preview.babylonjs.com/Oimo.js"></script>
-        <script src="https://preview.babylonjs.com/gltf_validator.js"></script>
-        <script src="https://preview.babylonjs.com/earcut.min.js"></script>
-        <script src="https://preview.babylonjs.com/babylon.js"></script>
-        <script src="https://preview.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
-        <script src="https://preview.babylonjs.com/materialsLibrary/babylonjs.materials.min.js"></script>
-        <script src="https://preview.babylonjs.com/proceduralTexturesLibrary/babylonjs.proceduralTextures.min.js"></script>
-        <script src="https://preview.babylonjs.com/postProcessesLibrary/babylonjs.postProcess.min.js"></script>
-        <script src="https://preview.babylonjs.com/loaders/babylonjs.loaders.js"></script>
-        <script src="https://preview.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
-        <script src="https://preview.babylonjs.com/gui/babylon.gui.min.js"></script>
+    <!-- Babylon.js -->
+    <script src="https://code.jquery.com/pep/0.4.2/pep.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
+    <script src="https://preview.babylonjs.com/ammo.js"></script>
+    <script src="https://preview.babylonjs.com/cannon.js"></script>
+    <script src="https://preview.babylonjs.com/Oimo.js"></script>
+    <script src="https://preview.babylonjs.com/gltf_validator.js"></script>
+    <script src="https://preview.babylonjs.com/earcut.min.js"></script>
+    <script src="js/vendor/babylon.js"></script>
+    <script src="js/vendor/babylon.inspector.bundle.js"></script>
+    <script src="js/vendor/babylonjs.materials.min.js"></script>
+    <script src="js/vendor/babylonjs.proceduralTextures.min.js"></script>
+    <script src="js/vendor/babylonjs.postProcess.min.js"></script>
+    <script src="js/vendor/babylonjs.loaders.js"></script>
+    <script src="js/vendor/babylonjs.serializers.min.js"></script>
+    <script src="js/vendor/babylon.gui.min.js"></script>
+    
+    <style>
+        html, body {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
 
-        <style>
-            html, body {
-                overflow: hidden;
-                width: 100%;
-                height: 100%;
-                margin: 0;
-                padding: 0;
-            }
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+            touch-action: none;
+        }
+    </style>
+    
+</head>
 
-            #renderCanvas {
-                width: 100%;
-                height: 100%;
-                touch-action: none;
-            }
-        </style>
-    </head>
 <body>
     <canvas id="renderCanvas"></canvas>
-    <script>
-        var canvas = document.getElementById("renderCanvas");
-
-        var createScene = function () {
-        
-            // This creates a basic Babylon Scene object (non-mesh)
-            var scene = new BABYLON.Scene(engine);
-        	scene.clearColor = BABYLON.Color3.Black();
-        
-            // This creates and positions a free camera (non-mesh)
-            var camera = new BABYLON.ArcRotateCamera("camera1", - Math.PI / 3, 5 * Math.PI / 12, 50, new BABYLON.Vector3(0, 5, 0), scene);
-        
-            // This attaches the camera to the canvas
-            camera.attachControl(canvas, true);
-            
-        	// var defaultGridMaterial = new BABYLON.GridMaterial("default", scene);
-        	// defaultGridMaterial.majorUnitFrequency = 5;
-        	// defaultGridMaterial.gridRatio = 0.5;
-        	
-        	// var sphere = BABYLON.Mesh.CreateSphere("sphere", 20, 9, scene);
-        	// sphere.position.y = 12;
-        	// sphere.position.x = -6;
-        	// sphere.material = defaultGridMaterial;
-        	
-         	// var knotMaterial = new BABYLON.GridMaterial("knotMaterial", scene);
-        	// knotMaterial.majorUnitFrequency = 8;
-        	// knotMaterial.minorUnitVisibility = 0.45;
-        	// knotMaterial.gridRatio = 0.3;
-        	// knotMaterial.mainColor = new BABYLON.Color3(0, 0, 0);
-        	// knotMaterial.lineColor = new BABYLON.Color3(0.0, 1.0, 0.0);
-        		
-         	// var knot = BABYLON.Mesh.CreateTorusKnot("knot", 3, 1, 128, 64, 2, 3, scene);
-        	// knot.position.y = 12.0;
-        	// knot.position.x = 6;
-        	// knot.material = knotMaterial;
-        
-            var groundMaterial = new BABYLON.GridMaterial("groundMaterial", scene);
-        	groundMaterial.majorUnitFrequency = 5;
-        	groundMaterial.minorUnitVisibility = 0.45;
-        	groundMaterial.gridRatio = 2;
-        	groundMaterial.backFaceCulling = false;
-        	groundMaterial.mainColor = new BABYLON.Color3(1, 1, 1);
-        	groundMaterial.lineColor = new BABYLON.Color3(1.0, 1.0, 1.0);
-        	groundMaterial.opacity = 0.98;
-        
-        	var ground = BABYLON.Mesh.CreateGroundFromHeightMap("ground", "textures/heightMap.png", 100, 100, 100, 0, 10, scene, false);
-        	ground.material = groundMaterial;
-        
-        	var skyMaterial = new BABYLON.GridMaterial("skyMaterial", scene);
-        	skyMaterial.majorUnitFrequency = 6;
-        	skyMaterial.minorUnitVisibility = 0.43;
-        	skyMaterial.gridRatio = 0.5;
-        	skyMaterial.mainColor = new BABYLON.Color3(0, 0.05, 0.2);
-        	skyMaterial.lineColor = new BABYLON.Color3(0, 1.0, 1.0);	
-        	skyMaterial.backFaceCulling = false;
-        	
-        	var skySphere = BABYLON.Mesh.CreateSphere("skySphere", 30, 110, scene);
-        	skySphere.material = skyMaterial;
-        	
-        	// engine.runRenderLoop(function () {
-        	// 	camera.alpha += 0.003;
-        	// });	
-        	scene.registerBeforeRender(function () {
-                //scene.getMeshByName("ground").rotation.y += 0.0005;
-                scene.getMeshByName("skySphere").rotation.y += 0.0005;
-            });
-            
-            return scene;
-        };
-__createScene = createScene;
-        
-        var engine = new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true });
-        var scene = createScene();
-
-        engine.runRenderLoop(function () {
-            if (scene) {
-                scene.render();
-            }
-        });
-
-        // Resize
-        window.addEventListener("resize", function () {
-            engine.resize();
-        });
-    </script>
 </body>
+
+<script src="js/render.js"></script>
 </html>
