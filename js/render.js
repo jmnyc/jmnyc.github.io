@@ -4,14 +4,16 @@ var createScene = function () {
 
     // This creates a basic Babylon Scene object (non-mesh)
     var scene = new BABYLON.Scene(engine);
-    scene.clearColor = BABYLON.Color3.Black();
-
+   
     // This creates and positions a free camera (non-mesh)
-    var camera = new BABYLON.ArcRotateCamera("camera1", - Math.PI / 3, 5 * Math.PI / 12, 50, new BABYLON.Vector3(0, 5, 0), scene);
+    var camera = new BABYLON.ArcRotateCamera("camera1", Math.PI / 1, Math.PI / 1.95, 185, new BABYLON.Vector3(0, 35, 0), scene);
 
     // This attaches the camera to the canvas
     camera.attachControl(canvas, true);
-    
+    	//Light direction is up and left
+    var light = new BABYLON.HemisphericLight("hemiLight", new BABYLON.Vector3(-1, 1, 0), scene);
+    light.emissive = new BABYLON.Color3(0, 1, 1);
+
     // var defaultGridMaterial = new BABYLON.GridMaterial("default", scene);
     // defaultGridMaterial.majorUnitFrequency = 5;
     // defaultGridMaterial.gridRatio = 0.5;
@@ -34,27 +36,45 @@ var createScene = function () {
     // knot.material = knotMaterial;
 
     var groundMaterial = new BABYLON.GridMaterial("groundMaterial", scene);
-    groundMaterial.majorUnitFrequency = 5;
-    groundMaterial.minorUnitVisibility = 0.45;
-    groundMaterial.gridRatio = 2;
+    groundMaterial.majorUnitFrequency = 0;
+    groundMaterial.minorUnitVisibility = 1;
+    groundMaterial.gridRatio = 15;
     groundMaterial.backFaceCulling = false;
-    groundMaterial.mainColor = new BABYLON.Color3(1, 1, 1);
-    groundMaterial.lineColor = new BABYLON.Color3(1.0, 1.0, 1.0);
-    groundMaterial.opacity = 0.98;
+    groundMaterial.mainColor = new BABYLON.Color3(0, 0, 0);
+    groundMaterial.lineColor = new BABYLON.Color3(5, 0, 5)
+    groundMaterial.opacity = 1;
 
-    var ground = BABYLON.Mesh.CreateGroundFromHeightMap("ground", "textures/heightMap.png", 100, 100, 100, 0, 10, scene, false);
-    ground.material = groundMaterial;
+    var grid = BABYLON.MeshBuilder.CreateGround("grid", {height: 400, width: 400, subdivisions: 4}, scene);
+    grid.material = groundMaterial;
 
-    var skyMaterial = new BABYLON.GridMaterial("skyMaterial", scene);
-    skyMaterial.majorUnitFrequency = 6;
-    skyMaterial.minorUnitVisibility = 0.43;
-    skyMaterial.gridRatio = 0.5;
-    skyMaterial.mainColor = new BABYLON.Color3(0, 0.05, 0.2);
-    skyMaterial.lineColor = new BABYLON.Color3(0, 1.0, 1.0);	
-    skyMaterial.backFaceCulling = false;
+    var mountainMaterial = new BABYLON.GridMaterial("groundMaterial", scene);
+    mountainMaterial.majorUnitFrequency = 2;
+    mountainMaterial.minorUnitVisibility = 1;
+    mountainMaterial.gridRatio = 20;
+    mountainMaterial.backFaceCulling = false;
+    mountainMaterial.mainColor = new BABYLON.Color3(0, 0.05, 0.09);
+    mountainMaterial.lineColor = new BABYLON.Color3(0, 1, 0.9);
+    mountainMaterial.opacity = 1;
+
+    var ground = BABYLON.Mesh.CreateGroundFromHeightMap("ground", "textures/map.png", 100, 380, 10, -40, 120, scene, false);
+    ground.material = mountainMaterial;
+    ground.position = new BABYLON.Vector3(100, -50, 0);
+
+    var skyMaterial = new BABYLON.StandardMaterial("skyMaterial", scene);
+    skyMaterial.diffuseTexture = new BABYLON.Texture("textures/skybox.jpg", scene);
     
-    var skySphere = BABYLON.Mesh.CreateSphere("skySphere", 30, 110, scene);
+    var skySphere = BABYLON.MeshBuilder.CreateSphere("skySphere", {diameter: 400, sideOrientation: BABYLON.Mesh.DOUBLESIDE}, scene);
     skySphere.material = skyMaterial;
+
+    BABYLON.SceneLoader.ImportMesh('', 'assets/', 'statue.babylon', scene, function (assetmesh) {
+        var statue = assetmesh[0];      
+        statue.position = new BABYLON.Vector3(20, 0, -50);
+        statue.scaling = new BABYLON.Vector3(0.15, 0.15, 0.15);
+        statue.rotation = new BABYLON.Vector3(0.15, 0.15, 0.15);
+        var axis = new BABYLON.Vector3(-0.2, 3, 0.1);
+        statue.rotate(axis, 2.5,  BABYLON.Space.WORLD);   
+    });
+
     
     // engine.runRenderLoop(function () {
     // 	camera.alpha += 0.003;
@@ -66,7 +86,6 @@ var createScene = function () {
     
     return scene;
 };
-__createScene = createScene;
 
 var engine = new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true });
 var scene = createScene();
