@@ -35,33 +35,45 @@ var createScene = function () {
     // knot.position.x = 6;
     // knot.material = knotMaterial;
 
-    var groundMaterial = new BABYLON.GridMaterial("groundMaterial", scene);
-    groundMaterial.majorUnitFrequency = 0;
-    groundMaterial.minorUnitVisibility = 1;
-    groundMaterial.gridRatio = 15;
-    groundMaterial.backFaceCulling = false;
-    groundMaterial.mainColor = new BABYLON.Color3(0, 0, 0);
-    groundMaterial.lineColor = new BABYLON.Color3(5, 0, 5)
-    groundMaterial.opacity = 1;
-
+    var gridMat = new BABYLON.GridMaterial("gridMat", scene);
+    gridMat.majorUnitFrequency = 0;
+    gridMat.minorUnitVisibility = 1;
+    gridMat.gridRatio = 15;
+    gridMat.backFaceCulling = false;
+    gridMat.mainColor = new BABYLON.Color3(0, 0, 0);
+    gridMat.lineColor = new BABYLON.Color3(5, 0, 5)
+    gridMat.opacity = 1;
     var grid = BABYLON.MeshBuilder.CreateGround("grid", {height: 400, width: 400, subdivisions: 4}, scene);
-    grid.material = groundMaterial;
+    grid.material = gridMat;
 
-    var mountainMaterial = new BABYLON.GridMaterial("groundMaterial", scene);
-    mountainMaterial.majorUnitFrequency = 2;
-    mountainMaterial.minorUnitVisibility = 1;
-    mountainMaterial.gridRatio = 20;
-    mountainMaterial.backFaceCulling = false;
-    mountainMaterial.mainColor = new BABYLON.Color3(0, 0.05, 0.09);
-    mountainMaterial.lineColor = new BABYLON.Color3(0, 1, 0.9);
-    mountainMaterial.opacity = 1;
-
-    var ground = BABYLON.Mesh.CreateGroundFromHeightMap("ground", "textures/map.png", 100, 380, 10, -40, 120, scene, false);
-    ground.material = mountainMaterial;
-    ground.position = new BABYLON.Vector3(100, -50, 0);
-
+    BABYLON.SceneLoader.ImportMesh('', 'assets/', 'mountain.babylon', scene, function (assetmesh) {
+        var mountain = assetmesh[0];
+        var mountainMat = new BABYLON.StandardMaterial("mountainMat", scene);
+        mountainMat.diffuseColor = new BABYLON.Color3(0, 0.4, 0.5);
+        //mountainMat.emissiveColor = new BABYLON.Color3(0, 1, 1);
+        mountain.position = new BABYLON.Vector3(140, -6, -50);
+        mountain.scaling = new BABYLON.Vector3(25, 5, 15);
+        mountain.rotation = new BABYLON.Vector3(-1.6, 1.5, 0);
+        //var axis = new BABYLON.Vector3(30, 10, 10);
+       // mountain.rotate(axis, 5,  BABYLON.Space.WORLD); 
+       mountain.material = mountainMat;
+       var gl = new BABYLON.GlowLayer('glow', scene);
+        gl.customEmissiveColorSelector = function (mesh, subMesh, material, result) {
+            if (mesh === mountain) {
+                result.set(0, 1, 1, 1);
+            } else {
+                result.set(0, 0, 0, 0);
+            }
+        }
+        gl.intensity = 0.3;
+         
+    });
+    var configSkyTexture = function (texture) {
+        texture.vScale = texture.uScale = 1;
+        return texture;
+    }
     var skyMaterial = new BABYLON.StandardMaterial("skyMaterial", scene);
-    skyMaterial.diffuseTexture = new BABYLON.Texture("textures/skybox.jpg", scene);
+    skyMaterial.diffuseTexture =configSkyTexture(new BABYLON.Texture("textures/sky.jpg", scene));
     
     var skySphere = BABYLON.MeshBuilder.CreateSphere("skySphere", {diameter: 400, sideOrientation: BABYLON.Mesh.DOUBLESIDE}, scene);
     skySphere.material = skyMaterial;
@@ -72,7 +84,29 @@ var createScene = function () {
         statue.scaling = new BABYLON.Vector3(0.15, 0.15, 0.15);
         statue.rotation = new BABYLON.Vector3(0.15, 0.15, 0.15);
         var axis = new BABYLON.Vector3(-0.2, 3, 0.1);
-        statue.rotate(axis, 2.5,  BABYLON.Space.WORLD);   
+        statue.rotate(axis, 2.5,  BABYLON.Space.WORLD); 
+         
+    });
+
+    BABYLON.SceneLoader.ImportMesh('', 'assets/', 'tree.babylon', scene, function (assetmesh) {
+        var tree = assetmesh[0];
+        var treeMat = new BABYLON.StandardMaterial("treeMat", scene);
+        treeMat.diffuseColor = new BABYLON.Color3(0.5, 0, 0.5);
+        tree.position = new BABYLON.Vector3(50, 0, 50);
+        tree.scaling = new BABYLON.Vector3(0.09, 0.09, 0.09);
+        tree.rotation = new BABYLON.Vector3(0.15, 0.15, 0.15);
+        // var axis = new BABYLON.Vector3(-0.2, 3, 0.1);
+        // tree.rotate(axis, 2.5,  BABYLON.Space.WORLD); 
+        tree.material = treeMat;
+        var gl = new BABYLON.GlowLayer('glow', scene);
+        gl.customEmissiveColorSelector = function (mesh, subMesh, material, result) {
+            if (mesh === tree) {
+                result.set(1, 0, 1, 1);
+            } else {
+                result.set(0, 0, 0, 0);
+            }
+        }
+        gl.intensity = 0.4;
     });
 
     

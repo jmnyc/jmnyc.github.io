@@ -1,0 +1,31 @@
+Exporter version: 6.2.2, Blender version: 2.80 (sub 75)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		inline textures     :  false
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		texture directory   :  C:\Users\admin\Documents\Work\jmnyc.github.io\assets\
+	Python World class constructor completed
+	processing begun of camera (UniversalCamera):  Camera
+	processing begun of mesh:  10446_Palm_Tree_v1_max2010_iteration-2
+		processing begun of material:  10446_Palm_Tree_v1
+			processing texture Palm_Tree_v1_Diffuse_10446
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		Custom split normals with tangents being used
+		num positions      :  49284
+		num normals        :  49284
+		num tangents       :  197136
+		num uvs            :  98568
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  202224
+	processing begun of light (POINT):  Light
+========= Writing of JSON file started =========
+	writing mesh:  10446_Palm_Tree_v1_max2010_iteration-2
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 9.7299 secs
