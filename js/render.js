@@ -6,11 +6,16 @@ var createScene = function () {
     var scene = new BABYLON.Scene(engine);
    
     // This creates and positions a free camera (non-mesh)
-    var camera = new BABYLON.ArcRotateCamera("camera1", Math.PI / 1, Math.PI / 1.95, 185, new BABYLON.Vector3(0, 35, 0), scene);
-
-    // This attaches the camera to the canvas
-    camera.attachControl(canvas, true);
-    	//Light direction is up and left
+    var camera = new BABYLON.ArcRotateCamera("camera", Math.PI / 1, Math.PI / 1.95, 185, new BABYLON.Vector3(0, 35, 0), scene);
+    camera.lowerRadiusLimit = 185;
+    camera.upperRadiusLimit = 185;
+    camera.lowerAlphaLimit = 3.14;
+    camera.upperAlphaLimit = 3.14;
+    camera.lowerBetaLimit = 1.5;
+    camera.upperBetaLimit = 1.5;
+    camera.attachControl(canvas, false);
+    camera.inputs.attached.pointers.buttons = [];
+    //Light direction is up and left
     var light = new BABYLON.HemisphericLight("hemiLight", new BABYLON.Vector3(-1, 1, 0), scene);
     light.emissive = new BABYLON.Color3(0, 1, 1);
 
