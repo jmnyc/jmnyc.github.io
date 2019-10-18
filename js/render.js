@@ -120,7 +120,7 @@ var createScene = function () {
     // });	
     scene.registerBeforeRender(function () {
         //scene.getMeshByName("ground").rotation.y += 0.0005;
-        scene.getMeshByName("skySphere").rotation.y += 0.0005;
+        scene.getMeshByName("skySphere").rotation.y += 0.0009;
     });
     
     return scene;
