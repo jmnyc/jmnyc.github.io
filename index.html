@@ -5,22 +5,12 @@
 
     <title>test</title>
 
-    <!-- Babylon.js -->
-    <script src="https://code.jquery.com/pep/0.4.2/pep.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
-    <script src="https://preview.babylonjs.com/ammo.js"></script>
-    <script src="https://preview.babylonjs.com/cannon.js"></script>
-    <script src="https://preview.babylonjs.com/Oimo.js"></script>
-    <script src="https://preview.babylonjs.com/gltf_validator.js"></script>
-    <script src="https://preview.babylonjs.com/earcut.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/vendor/jquery-3.4.1.min.js"></script>
     <script src="js/vendor/babylon.js"></script>
-    <script src="js/vendor/babylon.inspector.bundle.js"></script>
     <script src="js/vendor/babylonjs.materials.min.js"></script>
-    <script src="js/vendor/babylonjs.proceduralTextures.min.js"></script>
-    <script src="js/vendor/babylonjs.postProcess.min.js"></script>
-    <script src="js/vendor/babylonjs.loaders.js"></script>
-    <script src="js/vendor/babylonjs.serializers.min.js"></script>
-    <script src="js/vendor/babylon.gui.min.js"></script>
+    <script src="js/vendor/bootstrap.js"></script>
     
     <style>
         html, body {
@@ -41,8 +31,46 @@
 </head>
 
 <body>
+    <nav class="navbar fixed-top navbar-expand justify-content-between">
+        <a class="navbar-brand" href="#">JM</a>
+        
+        <ul class="navbar-nav">
+            <li class="nav-item portfolio"><a class="nav-link" href="#">portfolio</a></li>
+            <li class="nav-item contact"><a class="nav-link" href="#">contact</a></li>
+            <li class="nav-item"><a class="nav-link bolt-action" href="#"><img class="bolt-icon" src="icons/zap.svg"></a></li>
+        </ul>
+
+    </nav>
+    <main class="container position-absolute p-3 box-shadow" role="main">
+        <div class="content portfolio-container p-3 bg-white">
+            <h4>Portfolio</h4>
+            <div class="pt-3">
+                <p class="">
+                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                </p>
+            </div>
+            <div class="pt-3">
+                <p class="">
+                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                </p>
+            </div>
+        </div>
+        <div class="content contact-container p-3 bg-white">
+                <h4>Contact</h4>
+                <div class="pt-3">
+                    <p class="">
+                    Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                    </p>
+                </div>
+                <div class="pt-3">
+                    <p class="">
+                    Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                    </p>
+                </div>
+            </div>
+    </main>
     <canvas id="renderCanvas"></canvas>
 </body>
-
 <script src="js/render.js"></script>
+<script src="js/content.js"></script>
 </html>

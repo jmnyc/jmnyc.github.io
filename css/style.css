@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'outrun';
+    src: url('../fonts/Outrun future.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'outrun';
+    src: url('../fonts/Outrun future Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'outrun';
+    src: url('../fonts/Outrun future Bold Italic.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+main {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    display: none;
+}
+
+.content {
+}
+nav {
+    background-color: purple;
+    color: white;
+    border-bottom: 10px solid #510051;
+}
+
+nav a {
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.navbar-brand {
+    font-family: 'outrun';
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.5em;
+    color: aqua;
+}
+
+.bolt-icon {
+    width: 20px;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
