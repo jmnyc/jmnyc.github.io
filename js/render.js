@@ -10,7 +10,7 @@
         
             function SpawnLightningBolt(config) {
             var spark = new BABYLON.Sprite("Lightning", spriteManagerSpark);
-            spark.playAnimation(0, 8, false, 60);
+            spark.playAnimation(0, 20, false, 100);
             spark.height = config.height;
             spark.width = config.width;
             
@@ -47,16 +47,17 @@
             camera.attachControl(canvas, false);
             //camera.inputs.attached.pointers.buttons = [];
             //Light direction is up and left
-            var light = new BABYLON.HemisphericLight("hemiLight", new BABYLON.Vector3(-1, 1, 0), scene);
-            light.emissive = new BABYLON.Color3(1, 1, 1);
+            var light = new BABYLON.HemisphericLight("hemiLight", new BABYLON.Vector3(0, 0, 0), scene);
+            light.intensity = 0.7;
+            light.emissiveColor = new BABYLON.Color3(1, 1, 1);
 
             var gridMat = new BABYLON.GridMaterial("gridMat", scene);
             gridMat.majorUnitFrequency = 0;
             gridMat.minorUnitVisibility = 1;
             gridMat.gridRatio = 15;
             gridMat.backFaceCulling = false;
-            gridMat.mainColor = new BABYLON.Color3(0, 0, 0);
-            gridMat.lineColor = new BABYLON.Color3(5, 0, 5)
+            gridMat.mainColor = new BABYLON.Color3(0, 0, 0.2);
+            gridMat.lineColor = new BABYLON.Color3(3, 0, 3)
             gridMat.opacity = 1;
             var grid = BABYLON.MeshBuilder.CreateGround("grid", {height: 400, width: 250, subdivisions: 4}, scene);
             grid.material = gridMat;
@@ -64,11 +65,12 @@
             BABYLON.SceneLoader.ImportMesh('', 'assets/', 'mountain.babylon', scene, function (assetmesh) {
                 var mountainGrid = assetmesh[0];
                 var mountainGridMat = new BABYLON.StandardMaterial("mountainGridMat", scene);
-                mountainGridMat.diffuseColor = new BABYLON.Color3(1, 1, 1);
+                mountainGridMat.emissiveColor  = new BABYLON.Color3(0.7, 0.7, 0.7);
+                mountainGridMat.diffuseColor = new BABYLON.Color3(0, 1, 14);
                 mountainGridMat.wireframe = true;
                 mountainGrid.checkCollisions  = false;
-                mountainGrid.position = new BABYLON.Vector3(120, -6, -40);
-                mountainGrid.scaling = new BABYLON.Vector3(25, 5, 20);
+                mountainGrid.position = new BABYLON.Vector3(119, -6, -40);
+                mountainGrid.scaling = new BABYLON.Vector3(25.01, 5.01, 13.01);
                 mountainGrid.rotation = new BABYLON.Vector3(-1.6, 1.5, 0);
                 mountainGrid.material.zOffset = 1;
                 mountainGrid.material = mountainGridMat;
@@ -78,10 +80,10 @@
                 var mountain = assetmesh[0];
                 var mountainMat = new BABYLON.StandardMaterial("mountainMat", scene);
                 mountainMat.emissiveColor = new BABYLON.Color3(0, 0.5, 0.5);
-                mountainMat.diffuseColor = new BABYLON.Color3(0, 0.1, 0.1);
+                mountainMat.diffuseColor = new BABYLON.Color3(0, 0.1, 0.3);
                 //mountainMat.wireframe = true;
                 mountain.position = new BABYLON.Vector3(120, -6, -40);
-                mountain.scaling = new BABYLON.Vector3(25, 5, 20);
+                mountain.scaling = new BABYLON.Vector3(25, 5, 13);
                 mountain.rotation = new BABYLON.Vector3(-1.6, 1.5, 0);
                 mountain.material = mountainMat;
                 var gl = new BABYLON.GlowLayer('glow', scene);
@@ -92,7 +94,7 @@
                         result.set(0, 0, 0, 0);
                     }
                 }
-                gl.intensity = 0.1;
+                gl.intensity = 0.5;
                     
             });
 
@@ -106,53 +108,6 @@
             
             var skySphere = BABYLON.MeshBuilder.CreateSphere("skySphere", {diameter: 500, sideOrientation: BABYLON.Mesh.DOUBLESIDE}, scene);
             skySphere.material = skyMaterial;
-
-            BABYLON.SceneLoader.ImportMesh('', 'assets/', 'statue.babylon', scene, function (assetmesh) {
-                var statue = assetmesh[0];      
-                statue.position = new BABYLON.Vector3(0, 0.1, -50);
-                statue.scaling = new BABYLON.Vector3(0.20, 0.20, 0.20);
-                statue.rotation = new BABYLON.Vector3(0.15, 0.15, 0.15);
-                var axis = new BABYLON.Vector3(-0.2, 1.5, 0.1);
-                statue.rotate(axis, 2.5,  BABYLON.Space.WORLD); 
-                
-            });
-
-            BABYLON.SceneLoader.ImportMesh('', 'assets/', 'tree.babylon', scene, function (assetmesh) {
-                var tree = assetmesh[0];
-                var treeMat = new BABYLON.StandardMaterial("treeMat", scene);
-                treeMat.diffuseColor = new BABYLON.Color3(0.1, 0, 1);
-                tree.position = new BABYLON.Vector3(80, 0, 50);
-                tree.scaling = new BABYLON.Vector3(0.09, 0.09, 0.09);
-                tree.rotation = new BABYLON.Vector3(0.15, 0.15, 0.15);
-                tree.material = treeMat;
-                var gl = new BABYLON.GlowLayer('glow', scene);
-                gl.customEmissiveColorSelector = function (mesh, subMesh, material, result) {
-                    if (mesh === tree) {
-                        result.set(1, 0, 1, 1);
-                    } else {
-                        result.set(0, 0, 0, 0);
-                    }
-                }
-                gl.intensity = 0.2;
-            });
-            BABYLON.SceneLoader.ImportMesh('', 'assets/', 'tree.babylon', scene, function (assetmesh) {
-                var tree = assetmesh[0];
-                var treeMat = new BABYLON.StandardMaterial("treeMat", scene);
-                treeMat.diffuseColor = new BABYLON.Color3(0.1, 0, 1);
-                tree.position = new BABYLON.Vector3(80, 0, -100);
-                tree.scaling = new BABYLON.Vector3(0.09, 0.09, 0.09);
-                tree.rotation = new BABYLON.Vector3(0.15, 0.15, 0.15);
-                tree.material = treeMat;
-                var gl = new BABYLON.GlowLayer('glow', scene);
-                gl.customEmissiveColorSelector = function (mesh, subMesh, material, result) {
-                    if (mesh === tree) {
-                        result.set(1, 0, 1, 1);
-                    } else {
-                        result.set(0, 0, 0, 0);
-                    }
-                }
-                gl.intensity = 0.2;
-            });
 
             MakeLightningSystem({
                 scene: scene,
