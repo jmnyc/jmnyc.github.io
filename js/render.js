@@ -38,12 +38,12 @@
         
             // This creates and positions a free camera (non-mesh)
             var camera = new BABYLON.ArcRotateCamera("camera", Math.PI / 1, Math.PI / 1.95, 185, new BABYLON.Vector3(0, 35, 0), scene);
-            // camera.lowerRadiusLimit = 185;
-            // camera.upperRadiusLimit = 185;
-            // camera.lowerAlphaLimit = 3.14;
-            // camera.upperAlphaLimit = 3.14;
-            // camera.lowerBetaLimit = 1.5;
-            // camera.upperBetaLimit = 1.5;
+            camera.lowerRadiusLimit = 185;
+            camera.upperRadiusLimit = 185;
+            camera.lowerAlphaLimit = 3.14;
+            camera.upperAlphaLimit = 3.14;
+            camera.lowerBetaLimit = 1.5;
+            camera.upperBetaLimit = 1.5;
             camera.attachControl(canvas, false);
             //camera.inputs.attached.pointers.buttons = [];
             //Light direction is up and left
