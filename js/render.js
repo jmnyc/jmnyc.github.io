@@ -62,41 +62,41 @@
             var grid = BABYLON.MeshBuilder.CreateGround("grid", {height: 400, width: 250, subdivisions: 4}, scene);
             grid.material = gridMat;
 
-            BABYLON.SceneLoader.ImportMesh('', 'assets/', 'mountain.babylon', scene, function (assetmesh) {
-                var mountainGrid = assetmesh[0];
-                var mountainGridMat = new BABYLON.StandardMaterial("mountainGridMat", scene);
-                mountainGridMat.emissiveColor  = new BABYLON.Color3(0.7, 0.7, 0.7);
-                mountainGridMat.diffuseColor = new BABYLON.Color3(0, 1, 14);
-                mountainGridMat.wireframe = true;
-                mountainGrid.checkCollisions  = false;
-                mountainGrid.position = new BABYLON.Vector3(119, -6, -40);
-                mountainGrid.scaling = new BABYLON.Vector3(25.01, 5.01, 13.01);
-                mountainGrid.rotation = new BABYLON.Vector3(-1.6, 1.5, 0);
-                mountainGrid.material.zOffset = 1;
-                mountainGrid.material = mountainGridMat;
+            // BABYLON.SceneLoader.ImportMesh('', 'assets/', 'mountain.babylon', scene, function (assetmesh) {
+            //     var mountainGrid = assetmesh[0];
+            //     var mountainGridMat = new BABYLON.StandardMaterial("mountainGridMat", scene);
+            //     mountainGridMat.emissiveColor  = new BABYLON.Color3(0.7, 0.7, 0.7);
+            //     mountainGridMat.diffuseColor = new BABYLON.Color3(0, 1, 14);
+            //     mountainGridMat.wireframe = true;
+            //     mountainGrid.checkCollisions  = false;
+            //     mountainGrid.position = new BABYLON.Vector3(119, -6, -40);
+            //     mountainGrid.scaling = new BABYLON.Vector3(25.01, 5.01, 13.01);
+            //     mountainGrid.rotation = new BABYLON.Vector3(-1.6, 1.5, 0);
+            //     mountainGrid.material.zOffset = 1;
+            //     mountainGrid.material = mountainGridMat;
                 
-            });
-            BABYLON.SceneLoader.ImportMesh('', 'assets/', 'mountain.babylon', scene, function (assetmesh) {
-                var mountain = assetmesh[0];
-                var mountainMat = new BABYLON.StandardMaterial("mountainMat", scene);
-                mountainMat.emissiveColor = new BABYLON.Color3(0, 0.5, 0.5);
-                mountainMat.diffuseColor = new BABYLON.Color3(0, 0.1, 0.3);
-                //mountainMat.wireframe = true;
-                mountain.position = new BABYLON.Vector3(120, -6, -40);
-                mountain.scaling = new BABYLON.Vector3(25, 5, 13);
-                mountain.rotation = new BABYLON.Vector3(-1.6, 1.5, 0);
-                mountain.material = mountainMat;
-                var gl = new BABYLON.GlowLayer('glow', scene);
-                gl.customEmissiveColorSelector = function (mesh, subMesh, material, result) {
-                    if (mesh === mountain) {
-                        result.set(1, 1, 1, 1);
-                    } else {
-                        result.set(0, 0, 0, 0);
-                    }
-                }
-                gl.intensity = 0.5;
+            // });
+            // BABYLON.SceneLoader.ImportMesh('', 'assets/', 'mountain.babylon', scene, function (assetmesh) {
+            //     var mountain = assetmesh[0];
+            //     var mountainMat = new BABYLON.StandardMaterial("mountainMat", scene);
+            //     mountainMat.emissiveColor = new BABYLON.Color3(0, 0.5, 0.5);
+            //     mountainMat.diffuseColor = new BABYLON.Color3(0, 0.1, 0.3);
+            //     //mountainMat.wireframe = true;
+            //     mountain.position = new BABYLON.Vector3(120, -6, -40);
+            //     mountain.scaling = new BABYLON.Vector3(25, 5, 13);
+            //     mountain.rotation = new BABYLON.Vector3(-1.6, 1.5, 0);
+            //     mountain.material = mountainMat;
+            //     var gl = new BABYLON.GlowLayer('glow', scene);
+            //     gl.customEmissiveColorSelector = function (mesh, subMesh, material, result) {
+            //         if (mesh === mountain) {
+            //             result.set(1, 1, 1, 1);
+            //         } else {
+            //             result.set(0, 0, 0, 0);
+            //         }
+            //     }
+            //     gl.intensity = 0.5;
                     
-            });
+            // });
 
 
             var configSkyTexture = function (texture) {
